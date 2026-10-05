@@ -54,15 +54,6 @@
         <main class="mx-auto max-w-3xl px-4">
             <h1 class="mb-8 text-3xl font-bold">{{ $title }}</h1>
 
-            @if ($meta)
-                {{ $meta }}
-            @elseif ($entry && $entry->author)
-                <div class="my-8 rounded-md border-2 border-gray-500 bg-gray-100 p-6 text-lg">
-                    Created by {{ $entry->author->name }},
-                    {{ $entry->postDate->format('F j, Y') }}
-                </div>
-            @endif
-
             @if ($slot->isNotEmpty())
                 <div {{ $attributes }}>
                     {{ $slot }}

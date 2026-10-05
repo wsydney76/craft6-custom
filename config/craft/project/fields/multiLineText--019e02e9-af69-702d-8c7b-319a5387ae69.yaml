@@ -1,0 +1,15 @@
+handle: multiLineText
+instructions: null
+name: 'Multi Line Text'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: CraftCms\Cms\Field\PlainText

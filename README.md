@@ -30,6 +30,10 @@ Installed Blaze for performance improvements.
 
 Added a `Home` single section with a `Home` entry type (title, image, body fields).
 
+Added an `Articles` channel section with an `Article` entry type (title, image, content builder).
+
+Added a `Content Builder` matrix field with `Text`, `Image`, and `Heading` block types.
+
 ### Assets
 
 Added an `images` asset volume  with `public/images` root directory.

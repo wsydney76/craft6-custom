@@ -1,8 +1,61 @@
-dateModified: 1791196099
+dateModified: 1791224874
+elementSources:
+  CraftCms\Cms\Entry\Elements\Entry:
+    - defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: table
+      disabled: false
+      key: '*'
+      page: Entries
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    - defaultSort:
+        - title
+        - asc
+      defaultViewMode: table
+      disabled: false
+      key: singles
+      page: Entries
+      tableAttributes:
+        - status
+        - link
+      type: native
+    - heading: Channels
+      key: 'heading:c80c9ee7-862c-41ab-9612-ee033975ae88'
+      page: Entries
+      type: heading
+    - defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: table
+      disabled: false
+      key: 'section:90a86bc2-6e67-4370-889e-314a3736fc2d' # Article
+      page: Entries
+      tableAttributes:
+        - status
+        - 'fieldInstance:822a7287-3023-4a8a-8731-3ca6867d2f49'
+        - postDate
+        - link
+      type: native
 meta:
   __names__:
     01a10b9a-a7d1-7260-b4ec-4a68b5ec2730: Image # Image
     01a10b99-261f-7271-885a-75961ae2892c: Body # Body
+    4f754d1d-89a4-49e1-8199-8a3b18ca1678: Heading # Heading
+    8c75a619-1b13-4e21-a89b-788916565405: Article # Article
+    11d54dce-ad29-43fc-8a7e-8e802d3eb983: Text # Text
+    019e02e9-af69-702d-8c7b-319a5387ae69: 'Multi Line Text' # Multi Line Text
+    019e02ea-0f08-7368-a6c7-fc2aeca299df: 'Content Builder' # Content Builder
+    019e1627-dbcc-70f4-9cca-4316474768e3: 'Single Line Text' # Single Line Text
+    019e1628-65ec-7330-83c6-a72d7d1e9965: 'Heading Level' # Heading Level
+    90a86bc2-6e67-4370-889e-314a3736fc2d: Article # Article
+    7576fa7c-acd7-47b1-a9d1-88f0a92821b2: Image # Image
     507190df-3802-44b1-a9df-c56a042d3c6d: Home # Home
     d0261b43-45c5-4ee4-96dd-b74042705196: Default # Default
     d1b40666-8b39-4ce4-b084-1b6f782aea9e: Home # Home

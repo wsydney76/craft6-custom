@@ -1,0 +1,40 @@
+handle: contentBuilder
+instructions: null
+name: 'Content Builder'
+searchable: true
+settings:
+  createButtonLabel: 'New block'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    - __assoc__:
+        -
+          - uid
+          - 11d54dce-ad29-43fc-8a7e-8e802d3eb983 # Text
+        -
+          - group
+          - General
+    - __assoc__:
+        -
+          - uid
+          - 4f754d1d-89a4-49e1-8199-8a3b18ca1678 # Heading
+        -
+          - group
+          - General
+    - __assoc__:
+        -
+          - uid
+          - 7576fa7c-acd7-47b1-a9d1-88f0a92821b2 # Image
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: CraftCms\Cms\Field\Matrix

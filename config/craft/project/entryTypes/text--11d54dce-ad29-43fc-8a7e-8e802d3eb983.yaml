@@ -1,0 +1,46 @@
+allowLineBreaksInTitles: false
+color: amber
+description: null
+fieldLayouts:
+  010b9e31-33ca-4007-851d-20ea441e2aeb:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:98a3a042-78be-4a0e-8549-6be76cdd4b16'
+    tabs:
+      - elementCondition: null
+        elements:
+          - dateAdded: '2026-05-07T14:48:59+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 019e02e9-af69-702d-8c7b-319a5387ae69 # Multi Line Text
+            handle: text
+            instructions: null
+            instructionsPosition: before
+            label: Text
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField
+            uid: 98a3a042-78be-4a0e-8549-6be76cdd4b16
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b47ec026-2c56-498b-96c5-23d706413c14
+        userCondition: null
+    thumbFieldKey: null
+handle: text
+hasTitleField: false
+icon: paragraph
+name: Text
+showExpiryDateField: true
+showPostDateField: true
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'
