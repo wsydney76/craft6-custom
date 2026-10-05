@@ -1,0 +1,79 @@
+handle: image
+instructions: null
+name: Image
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:fa25ff96-88dd-4065-a4c8-c2f710b17247' # Images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: null
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - CraftCms\Cms\Asset\Elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - forQuery
+        - false
+      -
+        - class
+        - CraftCms\Cms\Asset\Conditions\AssetCondition
+      -
+        - conditionRules
+        - __assoc__:
+            -
+              - operator
+              - and
+            -
+              - rules
+              -
+                - __assoc__:
+                    -
+                      - class
+                      - CraftCms\Cms\Asset\Conditions\ViewableConditionRule
+                    -
+                      - uid
+                      - 2f71f655-d863-42cd-856c-11c8af87ee9a
+                    -
+                      - value
+                      - true
+                - __assoc__:
+                    -
+                      - class
+                      - CraftCms\Cms\Asset\Conditions\FileTypeConditionRule
+                    -
+                      - uid
+                      - 36d64367-a4be-4759-a64c-b30b5869b408
+                    -
+                      - operator
+                      - in
+                    -
+                      - values
+                      -
+                        - image
+  selectionLabel: 'Select an image'
+  showSearchInput: false
+  showSiteMenu: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:fa25ff96-88dd-4065-a4c8-c2f710b17247' # Images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: cards-grid
+translationKeyFormat: null
+translationMethod: none
+type: CraftCms\Cms\Field\Assets

@@ -1,0 +1,8 @@
+driver: craft
+handle: projectTransformer
+name: 'Project Transformer'
+settings:
+  disk: public
+  generateTransformsBeforePageLoad: true
+  hasUrls: true
+  subpath: dist/transforms

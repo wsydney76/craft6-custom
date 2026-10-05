@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - uid: 507190df-3802-44b1-a9df-c56a042d3c6d # Home
+handle: home
+maxAuthors: null
+minAuthors: 0
+name: Home
+previewTargets:
+  - label: 'Primary entry page'
+    refresh: true
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  d0261b43-45c5-4ee4-96dd-b74042705196: # Default
+    enabledByDefault: true
+    hasUrls: true
+    route: null
+    template: _entries/home/show
+    uriFormat: __home__
+type: single
+workflow: null

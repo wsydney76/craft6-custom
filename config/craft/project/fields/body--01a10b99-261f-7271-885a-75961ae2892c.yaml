@@ -1,0 +1,15 @@
+handle: body
+instructions: null
+name: Body
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: CraftCms\Cms\Field\PlainText

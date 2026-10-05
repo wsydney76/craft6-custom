@@ -1,28 +1,83 @@
-<a href="https://craftcms.com/" rel="noopener" target="_blank"><img width="247" height="60" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a>
+# Craft 6 Custom
 
-<br>
+This is a Craft 6 starter project which installs just the bare minimum to get you started with Craft CMS 6. It includes a basic setup with some things you will need in every project.
 
-[Craft](https://craftcms.com/) is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
+## Installation
 
-In technical terms, it’s a self-hosted PHP application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
+Create a project directory and run `bash setup/install` in it, or execute the included steps manually, adjusted to your needs.
 
-__Psst!__ Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
+## Changes
 
----
+### Composer
 
-:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try it out for yourself.
+Added `craft:migrate:up` to the `post-update-cmd` so that migrations are run automatically after a `composer update`.
 
-:construction_worker_woman: **If you are eager to start building:** You’re in exactly the right place!
+### Vite Integration
 
-## Getting Started
+Updated `.ddev/config.yaml`, `vite.config.js` and `resources/js/app.js` according to [DDEV Vite Integration](https://docs.ddev.com/en/stable/users/usage/vite/#vite-integration), so that the Vite development server `ddev npm run dev` will work with automatic reloading.
 
-This repository is a bare-bones [Composer](https://getcomposer.org/) “project”, intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
+### Livewire/Flux
 
-> **Note**  
-> Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers the setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
+Added Livewire and Flux (free) to the project.
 
-The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment. Follow our [quick-start instructions](https://craftcms.com/docs/5.x/install.html) to get up and running, then check out [next steps](https://craftcms.com/docs/5.x/install.html#next-steps)!
+Published Livewire config filed (setting the `high-voltage` emoji to `false`, sorry...).
 
-## Resources
+### Blaze
 
-Craft comes with a ton of official and community [resources](https://github.com/craftcms/cms#resources). 
+Installed Blaze for performance improvements.
+
+### Content Model
+
+Added a `Home` single section with a `Home` entry type (title, image, body fields).
+
+### Assets
+
+Added an `images` asset volume  with `public/images` root directory.
+
+Added a `Project Transformer` asset transformer with `public/dist/transforms` root directory..
+
+### Templates
+
+Added `layouts/app.blade.php` layout template with minimal markup and dark mode support.
+
+Added `_entries/home/show.blade.php` template for the home page with minimal markup.
+
+Added `<x-markdown :text="$text" />` blade component.
+
+Added `<x-img :image="..." width="..." height="..." />` blade component.
+
+Added `<x-prose>...</x-prose>` blade component for rendering rich text with Tailwind CSS typography styles.
+
+Added `<x-layouts.dark-mode-switcher />` blade component for switching between light and dark mode.
+
+### Tailwind CSS
+
+Added the [Typography](https://github.com/tailwindlabs/tailwindcss-typography) plugin to Tailwind CSS for better typography support.
+
+### Fonts
+
+Added custom fonts support, see [Laravel docs](https://laravel.com/framework/docs/13.x/vite#working-with-fonts).
+
+### Theming
+
+The layout follows [Flux theming conventions](https://fluxui.dev/docs/theming), using `zinc` as the default base color. 
+
+You can apply your theming in `resources/css/app.css` by overriding this base color and the accent color used in Flux components.
+
+See the [Flux theme builder](https://fluxui.dev/themes).
+
+This adds `accent`, `accent-foreground` and `accent-content` colors to the Tailwind CSS color palette, including dark mode support.
+
+### IDE 
+
+Added Prettier support for formatting `php,blade.php` files including sorting of Tailwind classes.
+
+In PhpStorm, you can enable Prettier by going to `Settings > Languages & Frameworks > JavaScript > Prettier` and
+
+* enable `Automatic Prettier configuration`
+* add `,php,blade.php` to the `Run for fieles` list
+* enable `Run on save`, `Run on paste`, and `Prefer prettier...` options.
+
+Dropped `laravel-pint`.
+
+Added `FauxCraft` file to enable autocompletion for often used variables in templates, such as `$entry`, `$image`, etc.
