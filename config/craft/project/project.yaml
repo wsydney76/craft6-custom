@@ -1,4 +1,4 @@
-dateModified: 1791271098
+dateModified: 1791304437
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -24,6 +24,7 @@ elementSources:
       page: Entries
       tableAttributes:
         - status
+        - section
         - link
       type: native
     - heading: Channels
@@ -57,16 +58,17 @@ meta:
     90a86bc2-6e67-4370-889e-314a3736fc2d: Article # Article
     7576fa7c-acd7-47b1-a9d1-88f0a92821b2: Image # Image
     18007da3-6f17-4249-b66c-a3d092378d4b: Search # Search
-    507190df-3802-44b1-a9df-c56a042d3c6d: Home # Home
+    507190df-3802-44b1-a9df-c56a042d3c6d: 'Simple Page' # Simple Page
     cd0de69b-34b4-4a90-8c48-6a3daa624aa0: 'Article Index' # Article Index
     d0261b43-45c5-4ee4-96dd-b74042705196: Default # Default
     d1b40666-8b39-4ce4-b084-1b6f782aea9e: Home # Home
     dd84d747-4f3d-4c6c-bb91-014e050ed11e: Default # Default
     fa25ff96-88dd-4065-a4c8-c2f710b17247: Images # Images
-    fad52ce1-f8eb-4e3c-877c-ff2e7885a850: 'Project Transformer' # Project Transformer
+    fad52ce1-f8eb-4e3c-877c-ff2e7885a850: 'Images Transformer' # Images Transformer
 system:
   edition: solo
-  name: Default
+  name: $APP_NAME
+  retryDuration: null
   schemaVersion: 6.0.0.22
   timeZone: $TZ
 users:

@@ -6,7 +6,7 @@
     <div class="flex items-center gap-4">
         <flux:brand :name="$nav['brand']['label']" {{ $attributes }}>
             <x-slot name="logo">
-                <flux:icon icon="bolt" />
+                <flux:icon :icon="$nav['brand']['logo']" />
             </x-slot>
         </flux:brand>
 

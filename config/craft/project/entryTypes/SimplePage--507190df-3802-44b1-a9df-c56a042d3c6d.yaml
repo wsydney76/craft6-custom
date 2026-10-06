@@ -4,6 +4,8 @@ description: null
 fieldLayouts:
   d3675761-3f9a-4b65-8b40-3cf921bf97fc:
     cardThumbAlignment: end
+    cardView:
+      - section
     tabs:
       - elementCondition: null
         elements:
@@ -73,10 +75,10 @@ fieldLayouts:
         uid: 4885fbee-1918-49c9-8b7d-9904906a7be7
         userCondition: null
     thumbFieldKey: 'layoutElement:927b7e94-7570-4259-a872-787aedaea851'
-handle: home
+handle: SimplePage
 hasTitleField: true
 icon: house-window
-name: Home
+name: 'Simple Page'
 showExpiryDateField: true
 showPostDateField: true
 showSlugField: true

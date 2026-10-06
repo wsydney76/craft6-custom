@@ -20,7 +20,16 @@ Clone this repository into a new project directory `git clone https://github.com
 
 ### Composer
 
-Added `craft:migrate:up` to the `post-update-cmd` so that migrations are run automatically after a `composer update`.
+* Added `craft:migrate:up` to the `post-update-cmd` so that migrations are run automatically after a `composer update`.
+* Clear Laravel and Craft caches after a `composer update` to avoid issues with stale caches.
+
+`composer.json` requires `6.x-dev` versions of `craftcms/cms` and `craftcms/cms-assets` packages. Run `composer update` to get the latest versions.
+
+Or go back to tagged releases of Craft CMS 6 by changing the version constraints in `composer.json` to `^6.0.0` and run `composer update`.
+
+### Config
+
+Added a couple of asset-related settings to `config/craft/general.php` to improve image quality, cache busting and ASCII support.
 
 ### Vite Integration
 
@@ -38,7 +47,9 @@ Added a `Content Builder` matrix field with `Text`, `Image`, and `Heading` block
 
 Added an `images` asset volume  with `public/images` root directory.
 
-Added a `Project Transformer` asset transformer with `public/dist/transforms` root directory..
+Added an `Images Transformer` asset transformer with `public/dist/transforms/images` root directory.
+
+> Convention: Set up a dedicated asset transformer for each asset volume to match paths.
 
 ### Templates
 
@@ -109,3 +120,9 @@ In PhpStorm, you can enable Prettier by going to `Settings > Languages & Framewo
 Dropped `laravel-pint`.
 
 Added `FauxCraft` file to enable autocompletion for often used variables in templates, such as `$entry`, `$image`, etc.
+
+## AI Support
+
+Not yet. In local dialect: 
+
+> Mia glangt dass i woas das i kannt wann i woin dad. Aber i duas ned, weil i muas ned.

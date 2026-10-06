@@ -40,6 +40,8 @@
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan optimize:clear",
+            "@php artisan craft:clear-caches:all",
             "@php artisan craft:migrate:up"
         ],
         "post-root-package-install": [

@@ -1,6 +1,6 @@
 altTranslationKeyFormat: null
 altTranslationMethod: none
-assetTransformer: projectTransformer
+assetTransformer: imagesTransformer
 fieldLayouts:
   3e427445-0c10-4117-a32d-b82b3272ce1d:
     cardThumbAlignment: end

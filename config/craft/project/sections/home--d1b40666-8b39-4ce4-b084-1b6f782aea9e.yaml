@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - uid: 507190df-3802-44b1-a9df-c56a042d3c6d # Home
+  - uid: 507190df-3802-44b1-a9df-c56a042d3c6d # Simple Page
 handle: home
 maxAuthors: null
 minAuthors: 0

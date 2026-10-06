@@ -12,6 +12,8 @@
 use CraftCms\Cms\Config\GeneralConfig;
 
 return GeneralConfig::create()
+    // === Default settings from craftcms/craft ===
+
     // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
     ->defaultWeekStartDay(1)
     // Preload Single entries as Twig variables
@@ -24,4 +26,10 @@ return GeneralConfig::create()
     ->aliases([
         '@webroot' => public_path(),
     ])
-;
+
+    // === Custom settings ===
+
+    ->revAssetUrls()
+    ->convertFilenamesToAscii()
+    ->limitAutoSlugsToAscii()
+    ->optimizeImageFilesize(false);

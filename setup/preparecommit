@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ddev snapshot --cleanup
+ddev snapshot --name seed

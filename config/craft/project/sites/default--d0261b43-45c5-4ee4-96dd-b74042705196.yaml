@@ -1,7 +1,8 @@
 baseUrl: $APP_URL
+enabled: true
 handle: default
 hasUrls: true
-language: en-US
+language: $APP_LOCALE
 name: Default
 primary: true
 siteGroup: dd84d747-4f3d-4c6c-bb91-014e050ed11e # Default
