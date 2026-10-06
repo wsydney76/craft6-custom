@@ -8,7 +8,13 @@ Craft 6 is still in alpha, so anything may break anytime.
 
 ## Installation
 
-Create a project directory and run `bash setup/install` in it, or execute the included steps manually, adjusted to your needs.
+Create a project directory and run `setup/install` in it, or execute the included steps manually, adjusted to your needs.
+
+> `setup/install` is not executable by default, so you may need to run `chmod +x setup/install` first, or run `bash setup/install` to execute it.
+
+> The git repository contains a `seed` DDEV database snapshot, so you can skip the Craft CMS installation if you run DDEV v1.25.4+. Otherwise, uncomment the `ddev exec craft install` line in `setup/install` to run the Craft CMS installation.
+ 
+> The seeded database comes with an admin user `admin` with password `craft6-custom`, so you can log in to the control panel immediately after installation.
 
 ## Changes
 
