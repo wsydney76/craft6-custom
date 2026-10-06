@@ -2,8 +2,6 @@
     'entry' => null,
     'title' => null,
     'featured' => null,
-    'meta' => null,
-    'prose' => null,
     'size' => 'md',
 ])
 @php

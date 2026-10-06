@@ -1,5 +1,5 @@
 @php
-    /** @var CraftCms\Cms\Entry\Elements\Home $entry */
+    /** @var CraftCms\Cms\Entry\Elements\SimplePage $entry */
 @endphp
 
 <x-layouts::app :entry="$entry">
