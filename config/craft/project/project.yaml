@@ -1,4 +1,4 @@
-dateModified: 1791315752
+dateModified: 1791318825
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -44,6 +44,12 @@ elementSources:
         - postDate
         - link
       type: native
+mcp:
+  publicAllowDrafts: false
+  publicAllowInactive: false
+  publicAllowRevisions: false
+  publicEnabled: false
+  publicRoute: /mcp
 meta:
   __names__:
     01a10b9a-a7d1-7260-b4ec-4a68b5ec2730: Image # Image

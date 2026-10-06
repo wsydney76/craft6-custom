@@ -1,3 +1,9 @@
+@props([
+    'entry',
+    'prev',
+    'next',
+])
+
 @php
     /** @var CraftCms\Cms\Entry\Elements\Article $entry */
 @endphp
@@ -14,4 +20,8 @@
 
         <x-latest-articles heading="More Latest Articles" :exclude="$entry" />
     </x-prose>
+
+    @if ($prev || $next)
+        <x-layouts.prev-next class="mt-12" :$prev :$next />
+    @endif
 </x-layouts::app>

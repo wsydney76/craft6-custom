@@ -114,8 +114,20 @@ Added Prettier support for formatting `php,blade.php` files including sorting of
 In PhpStorm, you can enable Prettier by going to `Settings > Languages & Frameworks > JavaScript > Prettier` and
 
 * enable `Automatic Prettier configuration`
-* add `,php,blade.php` to the `Run for fieles` list
+* add `,php,blade.php` to the `Run for files` list
 * enable `Run on save`, `Run on paste`, and `Prefer prettier...` options.
+
+Note: Prettier may mess up comments in `@props` directives, so we follow the convention to put comments into a separate `@php` block, e.g.
+
+```blade
+@props([
+    'entry',
+])
+
+@php
+    /** @var CraftCms\Cms\Entry\Elements\Article $entry */
+@endphp
+```
 
 Dropped `laravel-pint`.
 
