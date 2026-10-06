@@ -2,6 +2,10 @@
 
 This is a Craft 6 starter project which installs just the bare minimum to get you started with Craft CMS 6. It includes a basic setup with some things you will need in every project.
 
+## Disclaimer
+
+Craft 6 is still in alpha, so anything may break anytime.
+
 ## Installation
 
 Create a project directory and run `bash setup/install` in it, or execute the included steps manually, adjusted to your needs.
@@ -16,19 +20,9 @@ Added `craft:migrate:up` to the `post-update-cmd` so that migrations are run aut
 
 Updated `.ddev/config.yaml`, `vite.config.js` and `resources/js/app.js` according to [DDEV Vite Integration](https://docs.ddev.com/en/stable/users/usage/vite/#vite-integration), so that the Vite development server `ddev npm run dev` will work with automatic reloading.
 
-### Livewire/Flux
-
-Added Livewire and Flux (free) to the project.
-
-Published Livewire config filed (setting the `high-voltage` emoji to `false`, sorry...).
-
-### Blaze
-
-Installed Blaze for performance improvements.
-
 ### Content Model
 
-Added a `Home` single section with a `Home` entry type (title, image, body fields).
+Added  `Home, Search, Article Index` single sections with a `Home` entry type (title, image, body fields).
 
 Added an `Articles` channel section with an `Article` entry type (title, image, content builder).
 
@@ -42,17 +36,36 @@ Added a `Project Transformer` asset transformer with `public/dist/transforms` ro
 
 ### Templates
 
-Added `layouts/app.blade.php` layout template with minimal markup and dark mode support.
+For simplicity, templates use Flux components. Adjust or replace to match your design.
 
-Added `_entries/home/show.blade.php` template for the home page with minimal markup.
+Added templates:
 
-Added `<x-markdown :text="$text" />` blade component.
+* `layouts/app.blade.php` layout template with minimal markup and dark mode support.
+* `_entries/home/show.blade.php` template for the home page with minimal markup.
+* `_entries/article/show.blade.php` template for an article page with minimal markup.
 
-Added `<x-img :image="..." width="..." height="..." />` blade component.
+Added Blade components:
 
-Added `<x-prose>...</x-prose>` blade component for rendering rich text with Tailwind CSS typography styles.
+* `<x-markdown :text="$text" />` blade component.
+* `<x-nl2br :text="$text" />` blade component.
+* `<x-img :image="..." width="..." height="..." />` blade component.
+* `<x-prose>...</x-prose>` blade component for rendering rich text with Tailwind CSS typography styles.
+* `<x-layouts.nav />` blade component for rendering a navigation menu.
+* `<x-layouts.dark-mode-switcher />` blade component for switching between light and dark mode.
+* `<x-latest-articles heading="..." :exclude="$entry" />` for rendering a list of latest articles, as example for a class based component.
+* `<x-blocks :blocks="..." />` for rendering a content builder matrix field, with `blocks/{type}` components for each block type.
 
-Added `<x-layouts.dark-mode-switcher />` blade component for switching between light and dark mode.
+Added a `pages::search` Livewire component as example for a Livewire full-page component.
+
+### Livewire/Flux
+
+Added Livewire and Flux (free) to the project.
+
+Published Livewire config filed (setting the `high-voltage` emoji to `false`, sorry...).
+
+### Blaze
+
+Installed Blaze for performance improvements.
 
 ### Tailwind CSS
 
@@ -71,6 +84,10 @@ You can apply your theming in `resources/css/app.css` by overriding this base co
 See the [Flux theme builder](https://fluxui.dev/themes).
 
 This adds `accent`, `accent-foreground` and `accent-content` colors to the Tailwind CSS color palette, including dark mode support.
+
+### Routes
+
+Added a `'tests/{template}' route to test templates in the browser, e.g. `tests/home` will render the `resources/views/tests/home` template.
 
 ### IDE 
 

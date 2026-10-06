@@ -4,7 +4,8 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.5",
-        "craftcms/cms": "^6.0.0",
+        "craftcms/cms": "6.x-dev",
+        "craftcms/cms-assets": "6.x-dev",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0",
         "livewire/blaze": "^1.0",

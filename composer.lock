@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ae9b55e4a8df37f777cd7098a79b353",
+    "content-hash": "ed926cf02605733a52a918b3e4d1fa65",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -337,16 +337,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "f7a296f4c4cf8cb8bb83e35d6951a406bb11afa5"
+                "reference": "528948210cc46f967a4b98e83b19e76f2b504993"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/f7a296f4c4cf8cb8bb83e35d6951a406bb11afa5",
-                "reference": "f7a296f4c4cf8cb8bb83e35d6951a406bb11afa5",
+                "url": "https://api.github.com/repos/composer/semver/zipball/528948210cc46f967a4b98e83b19e76f2b504993",
+                "reference": "528948210cc46f967a4b98e83b19e76f2b504993",
                 "shasum": ""
             },
             "require": {
@@ -398,7 +398,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.5.0"
+                "source": "https://github.com/composer/semver/tree/3.5.1"
             },
             "funding": [
                 {
@@ -410,20 +410,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-24T14:38:51+00:00"
+            "time": "2026-10-05T13:12:12+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "6.0.0-alpha.19",
+            "version": "6.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "3e35f2d9e2ef6eb54ad4dc431d12dcb6ec424d06"
+                "reference": "8cbf96f28833d878384f7bc5a66d9198a47c44ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/3e35f2d9e2ef6eb54ad4dc431d12dcb6ec424d06",
-                "reference": "3e35f2d9e2ef6eb54ad4dc431d12dcb6ec424d06",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/8cbf96f28833d878384f7bc5a66d9198a47c44ec",
+                "reference": "8cbf96f28833d878384f7bc5a66d9198a47c44ec",
                 "shasum": ""
             },
             "require": {
@@ -601,22 +601,23 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-10-01T15:53:40+00:00"
+            "time": "2026-10-05T22:17:20+00:00"
         },
         {
             "name": "craftcms/cms-assets",
-            "version": "6.0.0-alpha.19",
+            "version": "6.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms-assets.git",
-                "reference": "7e2a951df9cf0f5d9c6b0f07918fb9aea2241c9b"
+                "reference": "ef135260dec5adad48de44992008bf5a88cea0eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/7e2a951df9cf0f5d9c6b0f07918fb9aea2241c9b",
-                "reference": "7e2a951df9cf0f5d9c6b0f07918fb9aea2241c9b",
+                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/ef135260dec5adad48de44992008bf5a88cea0eb",
+                "reference": "ef135260dec5adad48de44992008bf5a88cea0eb",
                 "shasum": ""
             },
+            "default-branch": true,
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -624,9 +625,9 @@
             ],
             "description": "Built assets for Craft CMS.",
             "support": {
-                "source": "https://github.com/craftcms/cms-assets/tree/6.0.0-alpha.19"
+                "source": "https://github.com/craftcms/cms-assets/tree/6.x"
             },
-            "time": "2026-10-01T15:56:17+00:00"
+            "time": "2026-10-05T22:02:54+00:00"
         },
         {
             "name": "craftcms/laravel-aliases",
@@ -10754,16 +10755,16 @@
         },
         {
             "name": "laravel/agent-detector",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/agent-detector.git",
-                "reference": "a190dd6b0fbc097ee909fbd59d35039bf82b4b4d"
+                "reference": "2e4f1e00f75afa82ce2ade999c6e72b3c81d03c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/agent-detector/zipball/a190dd6b0fbc097ee909fbd59d35039bf82b4b4d",
-                "reference": "a190dd6b0fbc097ee909fbd59d35039bf82b4b4d",
+                "url": "https://api.github.com/repos/laravel/agent-detector/zipball/2e4f1e00f75afa82ce2ade999c6e72b3c81d03c5",
+                "reference": "2e4f1e00f75afa82ce2ade999c6e72b3c81d03c5",
                 "shasum": ""
             },
             "require": {
@@ -10812,7 +10813,7 @@
                 "issues": "https://github.com/laravel/agent-detector/issues",
                 "source": "https://github.com/laravel/agent-detector"
             },
-            "time": "2026-09-12T16:17:12+00:00"
+            "time": "2026-10-05T14:40:01+00:00"
         },
         {
             "name": "laravel/pail",
@@ -12820,7 +12821,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "craftcms/cms": 20,
+        "craftcms/cms-assets": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

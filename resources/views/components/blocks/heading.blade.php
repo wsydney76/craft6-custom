@@ -1,8 +1,5 @@
 @php
     use CraftCms\Cms\Support\Html;
-@endphp
-
-@php
     /** @var CraftCms\Cms\Entry\Elements\Heading $block */
 @endphp
 

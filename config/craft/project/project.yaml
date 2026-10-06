@@ -1,4 +1,4 @@
-dateModified: 1791224874
+dateModified: 1791271098
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -56,7 +56,9 @@ meta:
     019e1628-65ec-7330-83c6-a72d7d1e9965: 'Heading Level' # Heading Level
     90a86bc2-6e67-4370-889e-314a3736fc2d: Article # Article
     7576fa7c-acd7-47b1-a9d1-88f0a92821b2: Image # Image
+    18007da3-6f17-4249-b66c-a3d092378d4b: Search # Search
     507190df-3802-44b1-a9df-c56a042d3c6d: Home # Home
+    cd0de69b-34b4-4a90-8c48-6a3daa624aa0: 'Article Index' # Article Index
     d0261b43-45c5-4ee4-96dd-b74042705196: Default # Default
     d1b40666-8b39-4ce4-b084-1b6f782aea9e: Home # Home
     dd84d747-4f3d-4c6c-bb91-014e050ed11e: Default # Default
@@ -65,7 +67,7 @@ meta:
 system:
   edition: solo
   name: Default
-  schemaVersion: 6.0.0.21
+  schemaVersion: 6.0.0.22
   timeZone: $TZ
 users:
   allowPublicRegistration: false

@@ -4,6 +4,7 @@
     'featured' => null,
     'meta' => null,
     'prose' => null,
+    'size' => 'md',
 ])
 @php
     $title ??= $entry->title ?? ($title ?? config('app.name'));
@@ -24,22 +25,20 @@
         @livewireStyles
     </head>
     <body class="bg-zinc-50 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+        <a
+            href="#main-content"
+            class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-zinc-900 focus:shadow-lg"
+        >
+            Skip to content
+        </a>
+
         <header class="mx-auto mb-8 max-w-5xl pt-8">
-            <nav class="flex items-center justify-between px-4 pb-6">
-                <a class="text-2xl font-bold" href="/">{{ config('app.name') }}</a>
-                <div class="flex items-center space-x-4">
-                    <ul class="flex space-x-4">
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                    </ul>
-                    <x-layouts.dark-mode-switcher />
-                </div>
-            </nav>
+            <x-layouts.nav />
 
             @if ($featured)
                 {{ $featured }}
             @elseif ($entry && $entry->image)
-                <div>
+                <div class="px-4 lg:px-0">
                     <x-img
                         :image="$entry->image->first()"
                         class="rounded-xl"
@@ -51,8 +50,17 @@
             @endif
         </header>
 
-        <main class="mx-auto max-w-3xl px-4">
-            <h1 class="mb-8 text-3xl font-bold">{{ $title }}</h1>
+        <main
+            id="main-content"
+            @class([
+                'mx-auto px-4',
+                'max-w-3xl' => $size === 'md',
+                'max-w-5xl' => $size === 'lg',
+            ])
+        >
+            <x-prose class="mb-8">
+                <h1>{{ $title }}</h1>
+            </x-prose>
 
             @if ($slot->isNotEmpty())
                 <div {{ $attributes }}>
@@ -67,7 +75,9 @@
             <div>&copy; {{ now()->format('Y') }}</div>
             <div>
                 @if ($entry)
-                    <a href="{{ $entry->cpEditUrl }}">Edit</a>
+                    @can('save', $entry)
+                        <a href="{{ $entry->cpEditUrl }}">Edit</a>
+                    @endcan
                 @endif
             </div>
         </footer>

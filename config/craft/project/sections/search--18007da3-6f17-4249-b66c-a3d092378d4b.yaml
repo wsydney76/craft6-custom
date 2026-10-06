@@ -1,11 +1,11 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - uid: 8c75a619-1b13-4e21-a89b-788916565405 # Article
-handle: article
-maxAuthors: 1
-minAuthors: 1
-name: Article
+  - uid: 507190df-3802-44b1-a9df-c56a042d3c6d # Home
+handle: search
+maxAuthors: null
+minAuthors: 0
+name: Search
 previewTargets:
   - label: 'Primary entry page'
     refresh: true
@@ -15,8 +15,8 @@ siteSettings:
   d0261b43-45c5-4ee4-96dd-b74042705196: # Default
     enabledByDefault: true
     hasUrls: true
-    route: null
-    template: _entries/article/show
-    uriFormat: 'articles/{slug}'
-type: channel
+    route: search
+    template: null
+    uriFormat: search
+type: single
 workflow: null

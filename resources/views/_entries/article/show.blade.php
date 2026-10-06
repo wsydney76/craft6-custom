@@ -11,5 +11,7 @@
         <x-layouts.meta :entry="$entry" />
 
         <x-blocks :blocks="$entry->contentBuilder->collect()" />
+
+        <x-latest-articles heading="More Latest Articles" :exclude="$entry" />
     </x-prose>
 </x-layouts::app>
