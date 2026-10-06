@@ -1,6 +1,6 @@
 # Craft 6 Custom
 
-This is a Craft 6 starter project which installs just the bare minimum to get you started with Craft CMS 6. It includes a basic setup with some things you will need in every project.
+This is a customized Craft 6 DDEV starter project which installs just the bare minimum to get you started with Craft CMS 6. It includes a basic setup with some things you will need in every project, and some examples of how to use them.
 
 ## Disclaimer
 
@@ -8,7 +8,7 @@ Craft 6 is still in alpha, so anything may break anytime.
 
 ## Installation
 
-Create a project directory and run `setup/install` in it, or execute the included steps manually, adjusted to your needs.
+Clone this repository into a new project directory `git clone https://github.com/wsydney76/craft6-custom your-project` and run `setup/install` in it, or execute the included steps manually, adjusted to your needs.
 
 > `setup/install` is not executable by default, so you may need to run `chmod +x setup/install` first, or run `bash setup/install` to execute it.
 
@@ -48,6 +48,7 @@ Added templates:
 
 * `layouts/app.blade.php` layout template with minimal markup and dark mode support.
 * `_entries/home/show.blade.php` template for the home page with minimal markup.
+* `_entries/article/index.blade.php` template for an article listing page, powered by `ArticleController`.
 * `_entries/article/show.blade.php` template for an article page with minimal markup.
 
 Added Blade components:
@@ -56,7 +57,7 @@ Added Blade components:
 * `<x-nl2br :text="$text" />` blade component.
 * `<x-img :image="..." width="..." height="..." />` blade component.
 * `<x-prose>...</x-prose>` blade component for rendering rich text with Tailwind CSS typography styles.
-* `<x-layouts.nav />` blade component for rendering a navigation menu.
+* `<x-layouts.nav />` blade component for rendering a navigation menu, powered by `NavComposer` view composer.
 * `<x-layouts.dark-mode-switcher />` blade component for switching between light and dark mode.
 * `<x-latest-articles heading="..." :exclude="$entry" />` for rendering a list of latest articles, as example for a class based component.
 * `<x-blocks :blocks="..." />` for rendering a content builder matrix field, with `blocks/{type}` components for each block type.
