@@ -11,6 +11,6 @@ class ArticleController
     {
         $articles = Entry::find()->section('article')->latest('postDate')->paginate(12);
 
-        return view('_entries.articles.index', compact('entry', 'articles'));
+        return view('entries.article.index', compact('entry', 'articles'));
     }
 }

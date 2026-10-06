@@ -16,7 +16,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     route: null
-    template: _entries/home/show
+    template: entries/home/show
     uriFormat: __home__
 type: single
 workflow: null

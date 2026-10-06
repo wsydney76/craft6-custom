@@ -16,7 +16,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     route: null
-    template: _entries/article/show
+    template: entries/article/show
     uriFormat: 'articles/{slug}'
 type: channel
 workflow: null
