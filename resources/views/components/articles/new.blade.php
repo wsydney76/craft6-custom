@@ -15,6 +15,7 @@ new class extends Component {
         return Entry::find()
             ->section('article')
             ->latest('postDate')
+            ->withCustomFields(false)
             ->simplePaginate(5);
     }
 };
