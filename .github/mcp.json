@@ -1,0 +1,16 @@
+{
+    "servers": {
+        "craft6-custom": {
+            "type": "stdio",
+            "command": "wsl.exe",
+            "args": [
+                "--cd",
+                "/home/wsydn/starters/craft6-custom",
+                "/usr/bin/ddev",
+                "artisan",
+                "craft:mcp:serve",
+                "--user=admin"
+            ]
+        }
+    }
+}
