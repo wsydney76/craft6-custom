@@ -1,4 +1,4 @@
-dateModified: 1791318825
+dateModified: 1791359374
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -48,8 +48,19 @@ mcp:
   publicAllowDrafts: false
   publicAllowInactive: false
   publicAllowRevisions: false
-  publicEnabled: false
+  publicEnabled: true
+  publicNestedEntryFieldHandles:
+    - contentBuilder
   publicRoute: /mcp
+  publicSectionHandles:
+    - article
+  publicSiteHandles:
+    - default
+  publicTools:
+    - craft-context-get
+    - craft-query
+  publicVolumeHandles:
+    - images
 meta:
   __names__:
     01a10b9a-a7d1-7260-b4ec-4a68b5ec2730: Image # Image

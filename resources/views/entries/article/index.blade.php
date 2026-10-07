@@ -14,5 +14,7 @@
         @endforeach
     </x-partials.cards-wrapper>
 
-    {{ $articles->links() }}
+    <div class="mt-8">
+        {{ $articles->links() }}
+    </div>
 </x-layouts::app>

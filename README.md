@@ -73,7 +73,10 @@ Added Blade components:
 * `<x-latest-articles heading="..." :exclude="$entry" />` for rendering a list of latest articles, as example for a class based component.
 * `<x-blocks :blocks="..." />` for rendering a content builder matrix field, with `blocks/{type}` components for each block type.
 
-Added a `pages::search` Livewire component as example for a Livewire full-page component.
+Added Livewire components:
+
+* `<livewire:articles.new />` for rendering a paginated list of latest articles on the home page.
+* `pages::search` Livewire component as example for a Livewire full-page component.
 
 ### Livewire/Flux
 
