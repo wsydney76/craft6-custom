@@ -74,7 +74,7 @@ Added Blade components:
 * `<x-layouts.dark-mode-switcher />` blade component for switching between light and dark mode.
 * `<x-latest-articles heading="..." :exclude="$entry" />` for rendering a list of latest articles, as example for a class based component.
 * `<x-blocks :blocks="..." />` for rendering a content builder matrix field, with `blocks/{type}` components for each block type.
-
+* `<x-partials.widget>` for rendering a widget-like card.
 Added Livewire components:
 
 * `<livewire:articles.new />` for rendering a paginated list of latest articles on the home page.

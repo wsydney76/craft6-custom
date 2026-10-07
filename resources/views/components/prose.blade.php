@@ -1,3 +1,3 @@
-<div {{ $attributes->class('prose dark:prose-invert') }}>
+<div {{ $attributes->class('prose prose-gray dark:prose-invert') }}>
     {{ $slot }}
 </div>

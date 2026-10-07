@@ -42,7 +42,8 @@
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
             "@php artisan optimize:clear",
             "@php artisan craft:clear-caches:all",
-            "@php artisan craft:migrate:up"
+            "@php artisan craft:migrate:up",
+            "@php artisan craft:ide-helper:custom-fields"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

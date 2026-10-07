@@ -5,14 +5,9 @@
 <x-layouts::app :entry="$entry">
     <x-prose>
         <x-markdown :text="$entry->body" />
-
-        <flux:card size="sm" variant="soft" body="divided" id="new-articles">
-            <flux:card.header>
-                <flux:card.heading size="lg">Latest Articles</flux:card.heading>
-            </flux:card.header>
-            <flux:card.body>
-                <livewire:articles.new />
-            </flux:card.body>
-        </flux:card>
     </x-prose>
+
+    <x-partials.widget class="mt-8" heading="Latest Articles">
+        <livewire:articles.new />
+    </x-partials.widget>
 </x-layouts::app>

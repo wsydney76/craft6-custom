@@ -21,11 +21,16 @@ new class extends Component {
 ?>
 
 <div>
-    <ul>
+    <ul class="space-y-1">
         @foreach ($this->entries as $entry)
-            <li>{{ $entry->link }} ({{ $entry->postDate->diffForHumans() }})</li>
+            <li>
+                <a class="hover:underline" href="{{ $entry->url }}">{{ $entry->title }}</a>
+                ({{ $entry->postDate->diffForHumans() }})
+            </li>
         @endforeach
     </ul>
 
-    {{ $this->entries->links(data: ['scrollTo' => false]) }}
+    <div class="mt-4">
+        {{ $this->entries->links(data: ['scrollTo' => false]) }}
+    </div>
 </div>
