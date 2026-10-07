@@ -12,9 +12,11 @@ Clone this repository into a new project directory `git clone https://github.com
 
 > `setup/install` is not executable by default, so you may need to run `chmod +x setup/install` first, or run `bash setup/install` to execute it.
 
-> The git repository contains a `seed` DDEV database snapshot, so you can skip the Craft CMS installation if you run DDEV v1.25.4+. Otherwise, uncomment the `ddev exec craft install` line in `setup/install` to run the Craft CMS installation.
+> The git repository contains a `seed` DDEV database snapshot, so the setup script skips the Craft CMS installation. If you do not run DDEV v1.25.4+, pull in the seed db via `ddev snapshot restore`, or run `craft install` manually and provide your own content.
  
 > The seeded database comes with an admin user `admin` with password `craft6-custom`, so you can log in to the control panel immediately after installation.
+
+> Ships with free-to-use images in the `public/images/seed` directory.
 
 ## Changes
 
