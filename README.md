@@ -129,7 +129,10 @@ Added a `'tests/{template}' route to test templates in the browser, e.g. `tests/
 
 Installed Pest for testing.
 
-Added a `tests/Feature/ContactPageLivewireTest.php` test as an example for Livewire testing.
+* Added a `tests/Feature/ContactPageLivewireTest.php` test.
+* Added a `tests/Feature/NotificationsPageLivewireTest.php` test.
+
+Run with `artisan test`.
 
 ### IDE 
 
