@@ -98,7 +98,7 @@ new class extends Component {
         <x-markdown :text="$body" />
     @endif
 
-    <flux:card size="sm" class="mt-8 w-150 space-y-4" x-data>
+    <flux:card size="sm" class="mt-8 space-y-4" x-data>
         @if ($state === 'success')
             <x-partials.callout
                 wire:transition

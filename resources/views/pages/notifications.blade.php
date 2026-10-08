@@ -48,6 +48,11 @@ new #[Title('Notifications')] class extends Component {
         abort_unless(auth()->user()->id === $notification->notifiable_id, 403);
         $notification->delete();
     }
+
+    public function updatedShow(): void
+    {
+        $this->resetPage();
+    }
 };
 ?>
 

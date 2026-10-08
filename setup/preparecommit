@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ddev artisan notifications:delete-all --force
+# ddev artisan notifications:delete-all --force
 ddev snapshot --cleanup
 ddev snapshot --name seed
