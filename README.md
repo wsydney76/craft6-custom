@@ -125,6 +125,12 @@ This adds `accent`, `accent-foreground` and `accent-content` colors to the Tailw
 
 Added a `'tests/{template}' route to test templates in the browser, e.g. `tests/home` will render the `resources/views/tests/home` template.
 
+### Testing
+
+Installed Pest for testing.
+
+Added a `tests/Feature/ContactPageLivewireTest.php` test as an example for Livewire testing.
+
 ### IDE 
 
 Added Prettier support for formatting `php,blade.php` files including sorting of Tailwind classes.

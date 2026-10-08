@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 
 it('renders the contact page route', function (): void {
@@ -46,17 +47,27 @@ it('normalizes values before attempting to send', function (): void {
 });
 
 it('handles successful send attempts with the expected UI states', function (): void {
-    Livewire::test('pages::contact')
-        ->set('name', 'Jane')
-        ->set('email', 'jane@example.com')
-        ->set('state', 'success')
-        ->set('message', 'This message is definitely long enough.')
-        ->call('send')
-        ->assertSet('state', 'success')
-        ->assertSet('message', '')
-        ->assertSee('Thank you, Jane!')
-        ->assertDontSee('Send message')
-        ->assertSet('state', 'success');
+    $initialNotificationCount = DB::table('notifications')->count();
+
+    DB::beginTransaction();
+
+    try {
+        Livewire::test('pages::contact')
+            ->set('name', 'Jane')
+            ->set('email', 'jane@example.com')
+            ->set('state', 'success')
+            ->set('message', 'This message is definitely long enough.')
+            ->call('send')
+            ->assertSet('state', 'success')
+            ->assertSet('message', '')
+            ->assertSee('Thank you, Jane!')
+            ->assertDontSee('Send message')
+            ->assertSet('state', 'success');
+    } finally {
+        DB::rollBack();
+    }
+
+    expect(DB::table('notifications')->count())->toBe($initialNotificationCount);
 });
 
 it('clears values, validation errors, and state when reset is clicked', function (): void {
