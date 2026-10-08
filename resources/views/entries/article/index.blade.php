@@ -4,7 +4,7 @@
             <x-partials.card
                 :href="$article->getUrl()"
                 :heading="$article->title"
-                :image="$article->image->first()"
+                :image="$article->image->eagerly()->first()"
             >
                 <flux:text>{{ $article->teaser }}</flux:text>
                 <flux:text>

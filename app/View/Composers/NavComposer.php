@@ -15,19 +15,24 @@ class NavComposer
         $nav = [
             'brand' => [
                 'label' => config('app.name'),
-                'url' => '/',
+                'url' => route('home'),
                 'logo' => 'bolt',
             ],
             'links' => [
                 [
                     'label' => 'Articles',
-                    'url' => '/articles',
+                    'url' => route('articles.index'),
                     'current' => request()->is('articles') || request()->is('articles/*'),
                 ],
                 [
                     'label' => 'Search',
-                    'url' => '/search',
+                    'url' => route('search'),
                     'current' => request()->is('search'),
+                ],
+                [
+                    'label' => 'Contact',
+                    'url' => route('contact'),
+                    'current' => request()->is('contact'),
                 ],
             ],
         ];

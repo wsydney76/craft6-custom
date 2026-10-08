@@ -46,7 +46,7 @@ fieldLayouts:
             instructions: null
             instructionsPosition: before
             label: null
-            oldFieldUid: null
+            oldFieldUid: 01a10b9a-a7d1-7260-b4ec-4a68b5ec2730 # Image
             required: false
             tip: null
             type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField

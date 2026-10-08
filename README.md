@@ -53,6 +53,14 @@ Added an `Images Transformer` asset transformer with `public/dist/transforms/ima
 
 > Convention: Set up a dedicated asset transformer for each asset volume to match paths.
 
+### Routing
+
+Using named routes for entries, pointing to controller actions.
+
+While this requires duplicate URI definitions, it enforces a consistent setup.
+
+Using named routes in templates, e.g. `route('articles.index)` makes templates independent of changes to the URI, and/or avoids additional queries, for example, to retrieve the actual URL of a single entry.
+
 ### Templates
 
 For simplicity, templates use Flux components. Adjust or replace to match your design.
@@ -79,6 +87,7 @@ Added Livewire components:
 
 * `<livewire:articles.new />` for rendering a paginated list of latest articles on the home page.
 * `pages::search` Livewire component as example for a Livewire full-page component.
+* `pages::contact` Livewire component for contact form with user notification.
 
 ### Livewire/Flux
 

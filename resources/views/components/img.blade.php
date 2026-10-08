@@ -19,5 +19,9 @@
         $tag = $image->getImg($transform, $sizes);
     @endphp
 
-    {!! Html::modifyTagAttributes($tag, $attributes->toArray()) !!}
+    @if ($attributes->isEmpty())
+        {!! $tag !!}
+    @else
+        {!! Html::modifyTagAttributes($tag, $attributes->toArray()) !!}
+    @endif
 @endif

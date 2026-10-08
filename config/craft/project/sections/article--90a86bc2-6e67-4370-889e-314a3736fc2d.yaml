@@ -15,7 +15,7 @@ siteSettings:
   d0261b43-45c5-4ee4-96dd-b74042705196: # Default
     enabledByDefault: true
     hasUrls: true
-    route: App\Http\Controllers\ArticleController@show
+    route: articles.show
     template: null
     uriFormat: 'articles/{slug}'
 type: channel

@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   - uid: 507190df-3802-44b1-a9df-c56a042d3c6d # Simple Page
-handle: articleIndex
+handle: contact
 maxAuthors: null
 minAuthors: 0
-name: 'Article Index'
+name: Contact
 previewTargets:
   - label: 'Primary entry page'
     refresh: true
@@ -15,8 +15,8 @@ siteSettings:
   d0261b43-45c5-4ee4-96dd-b74042705196: # Default
     enabledByDefault: true
     hasUrls: true
-    route: articles.index
+    route: contact
     template: null
-    uriFormat: articles
+    uriFormat: contact
 type: single
 workflow: null

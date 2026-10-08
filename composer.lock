@@ -418,12 +418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "631c429fdabd243e8e2c634cf070d4a02c660a2d"
+                "reference": "12a000962d1a5efedc7af9abd8c064612fc104ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/631c429fdabd243e8e2c634cf070d4a02c660a2d",
-                "reference": "631c429fdabd243e8e2c634cf070d4a02c660a2d",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/12a000962d1a5efedc7af9abd8c064612fc104ca",
+                "reference": "12a000962d1a5efedc7af9abd8c064612fc104ca",
                 "shasum": ""
             },
             "require": {
@@ -604,7 +604,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-10-07T16:42:33+00:00"
+            "time": "2026-10-08T01:17:11+00:00"
         },
         {
             "name": "craftcms/cms-assets",
@@ -612,12 +612,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms-assets.git",
-                "reference": "8e864a696a7df7c2af398abd09bf886bf3d21107"
+                "reference": "2d484d25505d66399ec727b79886fcd279498507"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/8e864a696a7df7c2af398abd09bf886bf3d21107",
-                "reference": "8e864a696a7df7c2af398abd09bf886bf3d21107",
+                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/2d484d25505d66399ec727b79886fcd279498507",
+                "reference": "2d484d25505d66399ec727b79886fcd279498507",
                 "shasum": ""
             },
             "default-branch": true,
@@ -630,7 +630,7 @@
             "support": {
                 "source": "https://github.com/craftcms/cms-assets/tree/6.x"
             },
-            "time": "2026-10-07T16:42:39+00:00"
+            "time": "2026-10-08T01:19:57+00:00"
         },
         {
             "name": "craftcms/laravel-aliases",
@@ -5762,16 +5762,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "4.0.1",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "bb7b959c8159957edae6f5084ebbac765d310e16"
+                "reference": "1fe20b9acb08ce810cec24d8a9d02e7c13426e4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/bb7b959c8159957edae6f5084ebbac765d310e16",
-                "reference": "bb7b959c8159957edae6f5084ebbac765d310e16",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/1fe20b9acb08ce810cec24d8a9d02e7c13426e4c",
+                "reference": "1fe20b9acb08ce810cec24d8a9d02e7c13426e4c",
                 "shasum": ""
             },
             "require": {
@@ -5862,7 +5862,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/4.0.1"
+                "source": "https://github.com/phpseclib/phpseclib/tree/4.0.2"
             },
             "funding": [
                 {
@@ -5878,7 +5878,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-26T12:15:13+00:00"
+            "time": "2026-10-07T19:55:38+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",

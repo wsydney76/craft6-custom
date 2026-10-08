@@ -44,9 +44,10 @@ new class extends Component {
     #[Computed]
     public function entries()
     {
+        $search = trim($this->search);
         return Entry::find()
             ->section('article')
-            ->search($this->search)
+            ->when($search, fn ($query) => $query->search('title:' . $search))
             ->orderBy('score')
             ->withCustomFields(false)
             ->paginate(12);
@@ -82,7 +83,7 @@ new class extends Component {
         <flux:input
             label="Search for:"
             type="search"
-            placeholder="Search..."
+            placeholder="Search in title..."
             icon="magnifying-glass"
             wire:model.live.debounce.250ms="search"
         />

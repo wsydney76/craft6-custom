@@ -1,4 +1,4 @@
-dateModified: 1791359374
+dateModified: 1791444145
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -72,6 +72,7 @@ meta:
     019e02ea-0f08-7368-a6c7-fc2aeca299df: 'Content Builder' # Content Builder
     019e1627-dbcc-70f4-9cca-4316474768e3: 'Single Line Text' # Single Line Text
     019e1628-65ec-7330-83c6-a72d7d1e9965: 'Heading Level' # Heading Level
+    87a488b7-81cd-4edf-abb6-22c1e7f2b36c: Contact # Contact
     90a86bc2-6e67-4370-889e-314a3736fc2d: Article # Article
     7576fa7c-acd7-47b1-a9d1-88f0a92821b2: Image # Image
     18007da3-6f17-4249-b66c-a3d092378d4b: Search # Search
@@ -86,7 +87,7 @@ system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.22
+  schemaVersion: 6.0.0.23
   timeZone: $TZ
 users:
   allowPublicRegistration: false

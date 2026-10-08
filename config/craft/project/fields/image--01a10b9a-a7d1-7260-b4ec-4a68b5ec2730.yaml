@@ -12,7 +12,7 @@ settings:
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1
-  minRelations: 1
+  minRelations: 0
   previewMode: full
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
