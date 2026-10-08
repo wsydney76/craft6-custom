@@ -12,7 +12,11 @@
 
         <flux:navbar class="max-md:hidden">
             @foreach ($nav['links'] as $link)
-                <flux:navbar.item :current="$link['current']" href="{{ $link['url'] }}">
+                <flux:navbar.item
+                    :badge="$link['badge']"
+                    :current="$link['current']"
+                    href="{{ $link['url'] }}"
+                >
                     {{ $link['label'] }}
                 </flux:navbar.item>
             @endforeach
@@ -32,7 +36,11 @@
     class="border-r border-zinc-200 bg-zinc-50 md:hidden dark:border-zinc-700 dark:bg-zinc-900"
 >
     @foreach ($nav['links'] as $link)
-        <flux:sidebar.item :current="$link['current']" href="{{ $link['url'] }}">
+        <flux:sidebar.item
+            :badge="$link['badge']"
+            :current="$link['current']"
+            href="{{ $link['url'] }}"
+        >
             {{ $link['label'] }}
         </flux:sidebar.item>
     @endforeach

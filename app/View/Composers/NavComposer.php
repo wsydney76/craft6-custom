@@ -23,16 +23,19 @@ class NavComposer
                     'label' => 'Articles',
                     'url' => route('articles.index'),
                     'current' => request()->is('articles') || request()->is('articles/*'),
+                    'badge' => null,
                 ],
                 [
                     'label' => 'Search',
                     'url' => route('search'),
                     'current' => request()->is('search'),
+                    'badge' => null,
                 ],
                 [
                     'label' => 'Contact',
                     'url' => route('contact'),
                     'current' => request()->is('contact'),
+                    'badge' => null,
                 ],
             ],
         ];
@@ -42,6 +45,7 @@ class NavComposer
                 'label' => 'Notifications',
                 'url' => route('notifications'),
                 'current' => request()->is('notifications'),
+                'badge' => auth()->user()->unreadNotifications->count(),
             ];
         }
 
