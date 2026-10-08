@@ -19,8 +19,8 @@ new class extends Component {
         'Unfortunately, your message couldn’t be sent. Please try again later.';
 
 
-    public string $title;
-    public string $body;
+    public string $title = '';
+    public string $body = '';
 
     #[Validate('string|required|min:3|max:255', as: 'Your name')]
     public string $name = '';
@@ -37,7 +37,9 @@ new class extends Component {
 
     public function mount(#[CurrentElement] ?Entry $entry = null): void
     {
-        [$this->title, $this->body] = [$entry?->title, $entry?->body];
+        if ($entry) {
+            [$this->title, $this->body] = [$entry?->title, $entry?->body];
+        }
     }
 
     public function render()
@@ -70,7 +72,7 @@ new class extends Component {
         $this->resetValidation();
     }
 
-    protected function normalizeValues(): void
+    public function normalizeValues(): void
     {
         $this->name = str($this->name)
             ->trim()
