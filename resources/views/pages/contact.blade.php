@@ -4,7 +4,6 @@ use App\Notifications\ContactNotification;
 use CraftCms\Cms\Entry\Elements\Entry;
 use CraftCms\Cms\Route\CurrentElement;
 use CraftCms\Cms\User\Elements\User;
-use Livewire\Attributes\Session;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -23,15 +22,12 @@ new class extends Component {
     public string $title;
     public string $body;
 
-    #[Session]
     #[Validate('string|required|min:3|max:255', as: 'Your name')]
     public string $name = '';
 
-    #[Session]
     #[Validate('string|required|email|max:255', as: 'Your E-Mail')]
     public string $email = '';
 
-    #[Session]
     #[Validate('required', message: 'Please enter a message that is at least 10 characters long.')]
     #[Validate('min:10', message: 'Please enter a message that is at least 10 characters long.')]
     #[Validate('max:5000', message: 'Please keep your message to a maximum of 5000 characters.')]
@@ -130,18 +126,18 @@ new class extends Component {
 
         @if ($state !== 'success')
             <div wire:transition class="space-y-4">
-                <flux:input label="Your name" wire:model.live.blur="name" placeholder="Jane Doe" />
+                <flux:input label="Your name" wire:model="name" placeholder="Jane Doe" />
 
                 <flux:input
                     label="Your E-Mail"
-                    wire:model.live.blur="email"
+                    wire:model="email"
                     placeholder="jane.doe@example.com"
                 />
 
                 <flux:textarea
                     label="Your message"
                     rows="5"
-                    wire:model.live.blur="message"
+                    wire:model="message"
                     placeholder="Your message..."
                 />
 
@@ -149,7 +145,7 @@ new class extends Component {
                     <flux:button wire:click="clear" icon="arrow-path" variant="filled">
                         Reset
                     </flux:button>
-                    <flux:button wire:click="send" icon="envelope" variant="primary">
+                    <flux:button wire:click="send" icon="paper-airplane" variant="primary">
                         Send message
                     </flux:button>
                 </div>
