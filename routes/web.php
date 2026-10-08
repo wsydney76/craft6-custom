@@ -9,6 +9,7 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('articles.ind
 Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
 Route::livewire('/search', 'pages::search')->name('search');
 Route::livewire('/contact', 'pages::contact')->name('contact');
+Route::livewire('/notifications', 'pages::notifications')->middleware('auth')->name('notifications');
 
 // Dynamically load test templates based on the template name passed in the URL
 Route::get('tests/{template}', function (string $template) {

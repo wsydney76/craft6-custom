@@ -418,12 +418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "12a000962d1a5efedc7af9abd8c064612fc104ca"
+                "reference": "ad165f4ac5e76bae4c54111055d92a45a40a87b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/12a000962d1a5efedc7af9abd8c064612fc104ca",
-                "reference": "12a000962d1a5efedc7af9abd8c064612fc104ca",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/ad165f4ac5e76bae4c54111055d92a45a40a87b9",
+                "reference": "ad165f4ac5e76bae4c54111055d92a45a40a87b9",
                 "shasum": ""
             },
             "require": {
@@ -486,11 +486,11 @@
                 "barryvdh/laravel-debugbar": "^4.2",
                 "craftcms/test-plugin": "1.0.1",
                 "dg/bypass-finals": "^1.9",
-                "driftingly/rector-laravel": "^2.1",
+                "driftingly/rector-laravel": "^2.6.2",
                 "fakerphp/faker": "^1.19.0",
                 "intervention/image-driver-vips": "^4.1",
-                "larastan/larastan": "^3.12",
-                "laravel/boost": "^2.6",
+                "larastan/larastan": "^3.13",
+                "laravel/boost": "^2.10.3",
                 "laravel/pao": "^1.0",
                 "laravel/pint": "^1.22",
                 "laravel/socialite": "^5.23",
@@ -604,7 +604,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-10-08T01:17:11+00:00"
+            "time": "2026-10-08T07:56:03+00:00"
         },
         {
             "name": "craftcms/cms-assets",
@@ -612,12 +612,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms-assets.git",
-                "reference": "2d484d25505d66399ec727b79886fcd279498507"
+                "reference": "30ed8616d509f3bb97e8a6026f684f89386bb86f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/2d484d25505d66399ec727b79886fcd279498507",
-                "reference": "2d484d25505d66399ec727b79886fcd279498507",
+                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/30ed8616d509f3bb97e8a6026f684f89386bb86f",
+                "reference": "30ed8616d509f3bb97e8a6026f684f89386bb86f",
                 "shasum": ""
             },
             "default-branch": true,
@@ -630,7 +630,7 @@
             "support": {
                 "source": "https://github.com/craftcms/cms-assets/tree/6.x"
             },
-            "time": "2026-10-08T01:19:57+00:00"
+            "time": "2026-10-08T07:58:51+00:00"
         },
         {
             "name": "craftcms/laravel-aliases",

@@ -19,6 +19,11 @@ class ContactNotification extends Notification
         //
     }
 
+    public function databaseType(): string
+    {
+        return 'contact-notification';
+    }
+
     /**
      * Get the notification's delivery channels.
      *
@@ -26,7 +31,7 @@ class ContactNotification extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     /**
@@ -49,7 +54,9 @@ class ContactNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-                //
-            ];
+            'name' => $this->name,
+            'email' => $this->email,
+            'message' => $this->message,
+        ];
     }
 }

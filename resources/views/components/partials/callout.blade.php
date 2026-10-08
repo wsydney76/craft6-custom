@@ -13,6 +13,12 @@
 @endphp
 
 <flux:callout :$icon :$variant>
+    @if ($heading)
+        <flux:callout.heading>
+            {{ $heading }}
+        </flux:callout.heading>
+    @endif
+
     <flux:callout.text>
         {{ $text }}
     </flux:callout.text>

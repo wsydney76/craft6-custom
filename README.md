@@ -88,6 +88,7 @@ Added Livewire components:
 * `<livewire:articles.new />` for rendering a paginated list of latest articles on the home page.
 * `pages::search` Livewire component as example for a Livewire full-page component.
 * `pages::contact` Livewire component for contact form with user notification.
+* `pages::notifications` Livewire component for displaying this notifications.
 
 ### Livewire/Flux
 

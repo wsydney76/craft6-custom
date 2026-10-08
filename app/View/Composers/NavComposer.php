@@ -37,6 +37,14 @@ class NavComposer
             ],
         ];
 
+        if (auth()->check()) {
+            $nav['links'][] = [
+                'label' => 'Notifications',
+                'url' => route('notifications'),
+                'current' => request()->is('notifications'),
+            ];
+        }
+
         $view->with('nav', $nav);
     }
 }
