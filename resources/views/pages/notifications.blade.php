@@ -3,8 +3,10 @@
 use Illuminate\Notifications\DatabaseNotification;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 new class extends Component {
+    use WithPagination;
     public bool $showAll = false;
 
     public function render()
@@ -25,7 +27,7 @@ new class extends Component {
             $notifications->whereNull('read_at');
         }
 
-        return $notifications->get();
+        return $notifications->paginate(12);
     }
 
     public function toggleNotifications(): void
@@ -40,8 +42,6 @@ new class extends Component {
 };
 ?>
 
-@craftRequireLogin
-
 <div class="space-y-4">
     <flux:button wire:click="toggleNotifications" variant="filled">
         {{ $showAll ? 'Show unread notifications' : 'Show all notifications' }}
@@ -50,7 +50,6 @@ new class extends Component {
     @forelse ($this->notifications as $notification)
         <flux:card class="flex justify-between gap-4 space-y-4">
             <div>
-
                 Date: {{ $notification->created_at->format('Y-m-d H:i') }}
                 <br />
                 Name: {{ $notification->data['name'] }}
@@ -79,4 +78,6 @@ new class extends Component {
     @empty
         <p>{{ $showAll ? 'No notifications.' : 'No unread notifications.' }}</p>
     @endforelse
+
+    {{ $this->notifications->links() }}
 </div>
