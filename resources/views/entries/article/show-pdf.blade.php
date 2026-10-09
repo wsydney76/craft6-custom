@@ -2,6 +2,8 @@
 <html>
     <head></head>
     <body>
+        <x-layouts.featured-image :image="$entry->image->first()" />
+
         <h1>{{ $entry->title }}</h1>
 
         <p>
