@@ -35,26 +35,37 @@ new #[Title('Notifications')] class extends Component {
     {
         abort_unless(auth()->user()->id === $notification->notifiable_id, 403);
         $notification->markAsRead();
-        $this->dispatch('notifications-updated');
+        $this->dispatchEvent();
     }
 
     public function markAsUnRead(DatabaseNotification $notification): void
     {
         abort_unless(auth()->user()->id === $notification->notifiable_id, 403);
         $notification->markAsUnRead();
-        $this->dispatch('notifications-updated');
+        $this->dispatchEvent();
     }
 
     public function delete(DatabaseNotification $notification): void
     {
         abort_unless(auth()->user()->id === $notification->notifiable_id, 403);
         $notification->delete();
-        $this->dispatch('notifications-updated');
+        $this->dispatchEvent();
     }
 
     public function updatedShow(): void
     {
         $this->resetPage();
+    }
+
+    private function dispatchEvent(): void
+    {
+        $this->dispatch(
+            'notifications-updated',
+            unreadCount: auth()
+                ->user()
+                ->unreadNotifications()
+                ->count(),
+        );
     }
 };
 ?>

@@ -13,8 +13,26 @@ new class extends Component {
         $this->nav = NavigationData::getNavItems();
     }
 
+    /**
+     * @param int $unreadCount
+     * @return void
+     *
+     * Updates the 'Notifications' unread count badge with the new unread count.
+     *
+     * Calling NavigationData::getNavItems() in an Ajax request would not detect the item as 'current'
+     * because the request is not aware of the current route.
+     * Therefore, we update the badge count manually.
+     *
+     * The 'notifications-updated' event is dispatched from the Notifications page when a notification is marked as read/unread or deleted,
+     * which triggers an additional Ajax request to update the unread count badge in the navigation.
+     *
+     * To avoid that, we could update the badge via Alpine JS (see commented-out code below),
+     * but that requires a DOM query depending on Flux's internal HTML structure, which is not ideal.
+     *
+     */
+
     #[On('notifications-updated')]
-    public function notificationsUpdated(): void
+    public function notificationsUpdated(int $unreadCount): void
     {
         if (! auth()->check()) {
             return;
@@ -22,10 +40,7 @@ new class extends Component {
 
         foreach ($this->nav['links'] as &$link) {
             if (isset($link['key']) && $link['key'] === 'notifications') {
-                $link['badge'] = auth()
-                    ->user()
-                    ->unreadNotifications()
-                    ->count();
+                $link['badge'] = $unreadCount;
                 break;
             }
         }
@@ -34,6 +49,19 @@ new class extends Component {
 
 ?>
 
+{{--
+    <div
+    x-data="{
+    updateCount(unreadCount) {
+    const elements = document.querySelectorAll('#notifications span')
+    elements.forEach((element) => {
+    element.textContent = unreadCount
+    })
+    },
+    }"
+    @notifications-updated.window="updateCount($event.detail.unreadCount)"
+    >
+--}}
 <div>
     <flux:header class="mb-8 flex justify-between bg-inherit dark:bg-inherit">
         <div class="flex items-center gap-4">
@@ -46,6 +74,7 @@ new class extends Component {
             <flux:navbar class="max-md:hidden">
                 @foreach ($this->nav['links'] as $link)
                     <flux:navbar.item
+                        :id="$link['key'] ?? null"
                         :badge="$link['badge']"
                         :current="$link['current']"
                         href="{{ $link['url'] }}"
