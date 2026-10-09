@@ -63,7 +63,9 @@ new class extends Component {
     >
 --}}
 <div>
-    <flux:header class="mb-8 flex justify-between bg-inherit dark:bg-inherit">
+    <flux:header
+        class="mb-8 flex justify-between border-b border-gray-500 bg-inherit dark:bg-inherit"
+    >
         <div class="flex items-center gap-4">
             <flux:brand :name="$this->nav['brand']['label']" {{ $attributes }}>
                 <x-slot name="logo">
