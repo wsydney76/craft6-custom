@@ -27,17 +27,20 @@ new class extends Component {
     #[Validate('not_regex:/ or /', message: 'The "OR" operator must be uppercase.')]
     public string $search = '';
 
-    // Title of the underlying entry element.
+    // Title/Body of the underlying entry element.
     // Do not define a public `Entry $entry` property, as Craft's elements are not serializable
     // and will throw an error when Livewire attempts to serialize the component state.
-    public string $title;
+    public string $title = '';
+    public string $body = '';
 
     // Pull in the underlying entry element.
     // The function signature must be exactly as this,
     // otherwise #[CurrentElement] will not work
     public function mount(#[CurrentElement] ?Entry $entry = null): void
     {
-        $this->title = $entry?->title;
+        if ($entry) {
+            [$this->title, $this->body] = [$entry->title, $entry->body ?? ''];
+        }
         $this->validate();
     }
 
@@ -47,7 +50,7 @@ new class extends Component {
         $search = trim($this->search);
         return Entry::find()
             ->section('article')
-            ->when($search, fn ($query) => $query->search('title:' . $search))
+            ->when($search, fn ($query) => $query->search($search))
             ->orderBy('score')
             ->withCustomFields(false)
             ->paginate(12);
@@ -73,6 +76,10 @@ new class extends Component {
 
 <flux:card variant="soft" body="divided">
     <flux:card.body class="space-y-4">
+        @if ($body)
+            <x-markdown :text="$body" />
+        @endif
+
         {{--
             wire:model provides two-way binding to the reactive search property, updating it as you type.
             The Flux input component wraps a standard input and adds support for labels, icons, loading indicators, and error messages,
@@ -83,7 +90,7 @@ new class extends Component {
         <flux:input
             label="Search for:"
             type="search"
-            placeholder="Search in title..."
+            placeholder="Enter search term..."
             icon="magnifying-glass"
             wire:model.live.debounce.250ms="search"
         />

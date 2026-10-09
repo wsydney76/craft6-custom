@@ -38,7 +38,7 @@ new class extends Component {
     public function mount(#[CurrentElement] ?Entry $entry = null): void
     {
         if ($entry) {
-            [$this->title, $this->body] = [$entry?->title, $entry?->body];
+            [$this->title, $this->body] = [$entry->title, $entry->body ?? ''];
         }
     }
 
