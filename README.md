@@ -131,8 +131,11 @@ Installed Pest for testing.
 
 * Added a `tests/Feature/ContactPageLivewireTest.php` test.
 * Added a `tests/Feature/NotificationsPageLivewireTest.php` test.
+* Added a `tests/Feature/ArticleShowPageTest.php` test.
 
 Run with `artisan test`.
+
+Tests are (mostly) AI generated, so they may not be perfect. Please check and adjust them to your needs.
 
 ### IDE 
 
