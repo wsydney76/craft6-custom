@@ -30,7 +30,7 @@
             Skip to content
         </a>
 
-        <header class="mx-auto mb-8 max-w-5xl pt-8">
+        <header class="mx-auto mb-8 max-w-5xl py-2">
             <livewire:layouts.nav />
 
             @if ($featured)
@@ -68,7 +68,7 @@
         </main>
 
         <footer
-            class="mx-auto mt-8 flex max-w-5xl justify-between border-t border-gray-500 px-4 py-6"
+            class="mx-auto mt-8 flex max-w-5xl justify-between border-t border-gray-500 px-4 py-2"
         >
             <div>&copy; {{ now()->format('Y') }}</div>
             <div>
