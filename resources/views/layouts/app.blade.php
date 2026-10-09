@@ -31,7 +31,7 @@
         </a>
 
         <header class="mx-auto mb-8 max-w-5xl pt-8">
-            <x-layouts.nav />
+            <livewire:layouts.nav />
 
             @if ($featured)
                 {{ $featured }}

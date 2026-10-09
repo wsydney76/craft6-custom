@@ -81,17 +81,18 @@ Added Blade components:
 * `<x-nl2br :text="$text" />` blade component.
 * `<x-img :image="..." width="..." height="..." />` blade component.
 * `<x-prose>...</x-prose>` blade component for rendering rich text with Tailwind CSS typography styles.
-* `<x-layouts.nav />` blade component for rendering a navigation menu, powered by `NavComposer` view composer.
 * `<x-layouts.dark-mode-switcher />` blade component for switching between light and dark mode.
 * `<x-latest-articles heading="..." :exclude="$entry" />` for rendering a list of latest articles, as example for a class based component.
 * `<x-blocks :blocks="..." />` for rendering a content builder matrix field, with `blocks/{type}` components for each block type.
 * `<x-partials.widget>` for rendering a widget-like card.
+
 Added Livewire components:
 
+* `<x-layouts.nav />` for rendering a navigation menu.
 * `<livewire:articles.new />` for rendering a paginated list of latest articles on the home page.
 * `pages::search` Livewire component as example for a Livewire full-page component.
 * `pages::contact` Livewire component for contact form with user notification.
-* `pages::notifications` Livewire component for displaying this notifications.
+* `pages::notifications` Livewire component for displaying these notifications.
 
 ### Livewire/Flux
 

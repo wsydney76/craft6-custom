@@ -1,17 +1,11 @@
 <?php
 
-namespace App\View\Composers;
+namespace App\Data;
 
-use Illuminate\View\View;
-
-class NavComposer
+class NavigationData
 {
-    /**
-     * Bind data to the view.
-     */
-    public function compose(View $view): void
+    public static function getNavItems(): array
     {
-        // TODO: Make this dynamic
         $nav = [
             'brand' => [
                 'label' => config('app.name'),
@@ -49,6 +43,6 @@ class NavComposer
             ];
         }
 
-        $view->with('nav', $nav);
+        return $nav;
     }
 }

@@ -70,6 +70,7 @@ new class extends Component {
 
         $this->reset('message');
         $this->resetValidation();
+        $this->dispatch('notifications-updated');
     }
 
     public function normalizeValues(): void
