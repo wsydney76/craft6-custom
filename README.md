@@ -94,6 +94,12 @@ Added Livewire components:
 * `pages::contact` Livewire component for contact form with user notification.
 * `pages::notifications` Livewire component for displaying these notifications.
 
+### Content Representations
+
+For articles (index and show pages), added simplified content representations for JSON and PDF, as well as a Twig template, using a `format=` query parameter.
+
+Installed `barryvdh/laravel-dompdf` for PDF generation.
+
 ### Livewire/Flux
 
 Added Livewire and Flux (free) to the project.

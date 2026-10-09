@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h1>{{ entry.title }}</h1>
+
+<p>
+    {{ entry.teaser }}
+</p>
+
+{{ blade('components.layouts.meta', {entry}) }}
+
+{{ blade('components.blocks', {blocks: entry.contentBuilder.collect }) }}
+</body>
+</html>

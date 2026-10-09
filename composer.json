@@ -4,6 +4,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.5",
+        "barryvdh/laravel-dompdf": "^3.1",
         "craftcms/cms": "6.x-dev",
         "craftcms/cms-assets": "6.x-dev",
         "laravel/framework": "^13.0",

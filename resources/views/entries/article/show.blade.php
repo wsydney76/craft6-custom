@@ -18,6 +18,14 @@
 
         <x-blocks :blocks="$entry->contentBuilder->collect()" />
 
+        <div class="not-prose my-8">
+            <flux:button variant="filled" size="xs" href="?format=pdf">Download PDF</flux:button>
+            <flux:button variant="filled" size="xs" href="?format=json">Download JSON</flux:button>
+            <flux:button variant="filled" size="xs" href="?format=twig">
+                Render with Twig
+            </flux:button>
+        </div>
+
         <x-latest-articles heading="More Latest Articles" :exclude="$entry" />
     </x-prose>
 

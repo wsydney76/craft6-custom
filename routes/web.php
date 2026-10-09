@@ -5,11 +5,17 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'show'])->name('home');
-Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/articles', [ArticleController::class, 'index'])
+    ->defaults('format', request('format', 'html'))
+    ->name('articles.index');
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])
+    ->defaults('format', request('format', 'html'))
+    ->name('articles.show');
 Route::livewire('/search', 'pages::search')->name('search');
 Route::livewire('/contact', 'pages::contact')->name('contact');
-Route::livewire('/notifications', 'pages::notifications')->middleware('auth')->name('notifications');
+Route::livewire('/notifications', 'pages::notifications')
+    ->middleware('auth')
+    ->name('notifications');
 
 // Dynamically load test templates based on the template name passed in the URL
 Route::get('tests/{template}', function (string $template) {
