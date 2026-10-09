@@ -36,15 +36,7 @@
             @if ($featured)
                 {{ $featured }}
             @elseif ($entry && $entry->image)
-                <div class="px-4 lg:px-0">
-                    <x-img
-                        :image="$entry->image->first()"
-                        class="rounded-xl"
-                        :sizes="[768, 480]"
-                        width="1024"
-                        height="400"
-                    />
-                </div>
+                <x-layouts.featured-image :image="$entry->image->first()" />
             @endif
         </header>
 

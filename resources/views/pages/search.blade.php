@@ -32,6 +32,7 @@ new class extends Component {
     // and will throw an error when Livewire attempts to serialize the component state.
     public string $title = '';
     public string $body = '';
+    public ?int $imageId = null;
 
     // Pull in the underlying entry element.
     // The function signature must be exactly as this,
@@ -40,6 +41,7 @@ new class extends Component {
     {
         if ($entry) {
             [$this->title, $this->body] = [$entry->title, $entry->body ?? ''];
+            $this->imageId = $entry->image?->first()?->id;
         }
         $this->validate();
     }
@@ -74,35 +76,41 @@ new class extends Component {
     The Flux card component just adds some styling, but you can use any HTML you want here.
 --}}
 
-<flux:card variant="soft" body="divided">
-    <flux:card.body class="space-y-4">
-        @if ($body)
-            <x-markdown :text="$body" />
-        @endif
+<div class="space-y-8">
+    @if ($body)
+        <x-markdown :text="$body" />
+    @endif
 
-        {{--
-            wire:model provides two-way binding to the reactive search property, updating it as you type.
-            The Flux input component wraps a standard input and adds support for labels, icons, loading indicators, and error messages,
-            while providing styling consistent with the Flux design system, including dark mode.
-            You can use standard HTML elements instead if you prefer,
-            and handle validation errors using Laravel's standard validation approach.
-        --}}
-        <flux:input
-            label="Search for:"
-            type="search"
-            placeholder="Enter search term..."
-            icon="magnifying-glass"
-            wire:model.live.debounce.250ms="search"
-        />
+    <x-slot:featured>
+        <x-layouts.featured-image :image="$imageId" />
+    </x-slot>
 
-        <ul>
-            @forelse ($this->entries as $entry)
-                <li>{{ $entry->link }}</li>
-            @empty
-                <li>No entries found.</li>
-            @endforelse
-        </ul>
+    <flux:card variant="soft" body="divided">
+        <flux:card.body class="space-y-4">
+            {{--
+                wire:model provides two-way binding to the reactive search property, updating it as you type.
+                The Flux input component wraps a standard input and adds support for labels, icons, loading indicators, and error messages,
+                while providing styling consistent with the Flux design system, including dark mode.
+                You can use standard HTML elements instead if you prefer,
+                and handle validation errors using Laravel's standard validation approach.
+            --}}
+            <flux:input
+                label="Search for:"
+                type="search"
+                placeholder="Enter search term..."
+                icon="magnifying-glass"
+                wire:model.live.debounce.250ms="search"
+            />
 
-        {{ $this->entries->links() }}
-    </flux:card.body>
-</flux:card>
+            <ul>
+                @forelse ($this->entries as $entry)
+                    <li>{{ $entry->link }}</li>
+                @empty
+                    <li>No entries found.</li>
+                @endforelse
+            </ul>
+
+            {{ $this->entries->links() }}
+        </flux:card.body>
+    </flux:card>
+</div>

@@ -21,6 +21,7 @@ new class extends Component {
 
     public string $title = '';
     public string $body = '';
+    public ?int $imageId = null;
 
     #[Validate('string|required|min:3|max:255', as: 'Your name')]
     public string $name = '';
@@ -39,6 +40,7 @@ new class extends Component {
     {
         if ($entry) {
             [$this->title, $this->body] = [$entry->title, $entry->body ?? ''];
+            $this->imageId= $entry->image?->first()?->id;
         }
     }
 
@@ -97,6 +99,10 @@ new class extends Component {
 ?>
 
 <div class="space-y-8">
+    <x-slot:featured>
+        <x-layouts.featured-image :image="$imageId" />
+    </x-slot>
+
     @if ($body)
         <x-markdown :text="$body" />
     @endif

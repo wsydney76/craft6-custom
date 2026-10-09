@@ -9,7 +9,7 @@ settings:
   branchLimit: null
   defaultPlacement: end
   defaultUploadLocationSource: 'volume:fa25ff96-88dd-4065-a4c8-c2f710b17247' # Images
-  defaultUploadLocationSubpath: null
+  defaultUploadLocationSubpath: seed
   maintainHierarchy: false
   maxRelations: 1
   minRelations: 0

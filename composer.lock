@@ -197,16 +197,16 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v2.3.1",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "504ed1765d7a6788830c197390879d677f54d868"
+                "reference": "e3ce66714cfa181b848533d926e8583261253c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/504ed1765d7a6788830c197390879d677f54d868",
-                "reference": "504ed1765d7a6788830c197390879d677f54d868",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/e3ce66714cfa181b848533d926e8583261253c9e",
+                "reference": "e3ce66714cfa181b848533d926e8583261253c9e",
                 "shasum": ""
             },
             "require": {
@@ -255,9 +255,9 @@
             ],
             "support": {
                 "issues": "https://github.com/commerceguys/addressing/issues",
-                "source": "https://github.com/commerceguys/addressing/tree/v2.3.1"
+                "source": "https://github.com/commerceguys/addressing/tree/v2.3.2"
             },
-            "time": "2026-08-23T14:17:54+00:00"
+            "time": "2026-10-09T10:50:35+00:00"
         },
         {
             "name": "composer/pcre",
@@ -418,12 +418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "58d52d1035a106754ebd49971c366e97bc9c2dcf"
+                "reference": "e5d6494329509be47e83ea859ddba4c5b296b81a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/58d52d1035a106754ebd49971c366e97bc9c2dcf",
-                "reference": "58d52d1035a106754ebd49971c366e97bc9c2dcf",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/e5d6494329509be47e83ea859ddba4c5b296b81a",
+                "reference": "e5d6494329509be47e83ea859ddba4c5b296b81a",
                 "shasum": ""
             },
             "require": {
@@ -604,7 +604,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-10-09T04:11:53+00:00"
+            "time": "2026-10-09T14:56:30+00:00"
         },
         {
             "name": "craftcms/cms-assets",
@@ -612,12 +612,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms-assets.git",
-                "reference": "ecdbb222f8bbb9999626acb5b4838438c3287d06"
+                "reference": "be93661e9a77ade658749c3d667631b68beec2d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/ecdbb222f8bbb9999626acb5b4838438c3287d06",
-                "reference": "ecdbb222f8bbb9999626acb5b4838438c3287d06",
+                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/be93661e9a77ade658749c3d667631b68beec2d7",
+                "reference": "be93661e9a77ade658749c3d667631b68beec2d7",
                 "shasum": ""
             },
             "default-branch": true,
@@ -630,7 +630,7 @@
             "support": {
                 "source": "https://github.com/craftcms/cms-assets/tree/6.x"
             },
-            "time": "2026-10-09T04:14:45+00:00"
+            "time": "2026-10-09T14:58:47+00:00"
         },
         {
             "name": "craftcms/laravel-aliases",

@@ -1,4 +1,5 @@
 @php
+    use CraftCms\Cms\Asset\Elements\Asset;
     use CraftCms\Cms\Support\Html;
 @endphp
 
@@ -10,6 +11,12 @@
     'format' => 'webp',
     'sizes' => [],
 ])
+
+@php
+    if (! $image instanceof Asset && $image) {
+        $image = Asset::findOne($image);
+    }
+@endphp
 
 @if ($image)
     @php
