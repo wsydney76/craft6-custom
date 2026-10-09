@@ -2,19 +2,39 @@
 
 use App\Data\NavigationData;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 new class extends Component {
-    #[Computed]
-    public function nav(): array
+    public array $nav = [];
+
+    public function mount()
     {
-        return NavigationData::getNavItems();
+        $this->nav = NavigationData::getNavItems();
+    }
+
+    #[On('notifications-updated')]
+    public function notificationsUpdated(): void
+    {
+        if (! auth()->check()) {
+            return;
+        }
+
+        foreach ($this->nav['links'] as &$link) {
+            if (isset($link['key']) && $link['key'] === 'notifications') {
+                $link['badge'] = auth()
+                    ->user()
+                    ->unreadNotifications()
+                    ->count();
+                break;
+            }
+        }
     }
 };
 
 ?>
 
-<div @notifications-updated.window="$wire.$refresh()">
+<div>
     <flux:header class="mb-8 flex justify-between bg-inherit dark:bg-inherit">
         <div class="flex items-center gap-4">
             <flux:brand :name="$this->nav['brand']['label']" {{ $attributes }}>

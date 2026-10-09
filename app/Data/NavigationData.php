@@ -36,6 +36,7 @@ class NavigationData
 
         if (auth()->check()) {
             $nav['links'][] = [
+                'key' => 'notifications',
                 'label' => 'Notifications',
                 'url' => route('notifications'),
                 'current' => request()->is('notifications'),
