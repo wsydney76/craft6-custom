@@ -16,5 +16,6 @@ ddev artisan storage:link &&
 ddev npm install &&
 ddev npm run build &&
 ddev describe &&
+ddev artisan entries:generate-missing-image-transforms
 ddev launch
 

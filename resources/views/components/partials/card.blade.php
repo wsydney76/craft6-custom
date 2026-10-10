@@ -2,6 +2,8 @@
     'href',
     'image' => null,
     'heading',
+    'width' => 450,
+    'height' => 200,
 ])
 <flux:card {{ $attributes->merge(['size' => 'sm']) }}>
     <flux:card.bleed>
@@ -9,8 +11,8 @@
             <x-img
                 class="transition-transform hover:scale-105"
                 :image="$image"
-                width="450"
-                height="200"
+                :width="$width"
+                :height="$height"
             />
         </a>
     </flux:card.bleed>
