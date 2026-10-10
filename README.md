@@ -1,6 +1,6 @@
 # Craft 6 Custom
 
-This is a customized Craft 6 DDEV starter project which installs just the bare minimum to get you started with Craft CMS 6. It includes a basic setup with some things you will need in every project, and some examples of how to use them.
+This is a customized Craft 6 DDEV starter project. It includes a basic setup with some things you will need in every project, and some examples of more advanced techniques.
 
 For a more basic starter without content model and any examples, see [Craft 6 Basic](https://github.com/wsydney76/craft6-basic).
 
