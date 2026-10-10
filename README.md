@@ -139,6 +139,7 @@ Installed Pest for testing.
 * Added a `tests/Feature/ContactPageLivewireTest.php` test.
 * Added a `tests/Feature/NotificationsPageLivewireTest.php` test.
 * Added a `tests/Feature/ArticleShowPageTest.php` test.
+* Added a `tests/Feature/ArticleShowFormatsTest.php` test.
 
 Run with `artisan test`.
 

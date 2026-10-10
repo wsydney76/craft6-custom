@@ -34,10 +34,6 @@ function createArticleEntry(string $title, DateTimeInterface $postDate): Entry
     $entry->title = $title;
     $entry->slug = Str::slug($title) . '-' . Str::lower(Str::random(6));
     $entry->postDate = $postDate;
-    $entry->setFieldValue('contentBuilder', [
-        'sortOrder' => [],
-        'entries' => [],
-    ]);
 
     expect(Elements::saveElement($entry))->toBeTrue();
 
