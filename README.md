@@ -140,6 +140,7 @@ Installed Pest for testing.
 * Added a `tests/Feature/NotificationsPageLivewireTest.php` test.
 * Added a `tests/Feature/ArticleShowPageTest.php` test.
 * Added a `tests/Feature/ArticleShowFormatsTest.php` test.
+* Added a `tests/Feature/HomeControllerTest.php` test.
 
 Run with `artisan test`.
 
