@@ -23,6 +23,17 @@
                 ></flux:button>
             @endcan
         @endif
+
+        @guest
+            <flux:button
+                variant="ghost"
+                size="xs"
+                tooltip="Login"
+                href="{{ route('login', ['redirect' => request()->fullUrl()]) }}"
+            >
+                Login
+            </flux:button>
+        @endguest
     </div>
     <div class="text-right">
         @if ($articleOfTheDay)
