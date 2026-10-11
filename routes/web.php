@@ -1,15 +1,19 @@
 <?php
 
-// Search single section
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
 use App\Notifications\ContactNotification;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [HomeController::class, 'show'])->name('home');
+
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
+
 Route::livewire('/search', 'pages::search')->name('search');
 Route::livewire('/contact', 'pages::contact')->name('contact');
+
 Route::livewire('/notifications', 'pages::notifications')
     ->middleware('auth')
     ->name('notifications');
@@ -37,3 +41,18 @@ Route::get('/preview/notification', function () {
 })
     ->middleware('auth')
     ->name('preview.notification');
+
+Route::get('/login', function () {
+    return response()->redirectTo(request()->get('redirect'));
+})
+    ->middleware('auth')
+    ->name('login');
+
+Route::get('/logout', function (Request $request) {
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return response()->redirectToRoute('home');
+})
+    ->middleware('auth')
+    ->name('logout');

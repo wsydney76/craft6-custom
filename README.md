@@ -64,6 +64,8 @@ While this requires duplicate URI definitions, it enforces a consistent setup.
 
 Using named routes in templates, e.g. `route('articles.index)` makes templates independent of changes to the URI, and/or avoids additional queries, for example, to retrieve the actual URL of a single entry.
 
+Added provisional `login` and `logout` routes.we
+
 ### Templates
 
 For simplicity, templates use Flux components. Adjust or replace to match your design.
