@@ -495,12 +495,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "9b84a6ba7fe48bdde69425e376389459807ca9af"
+                "reference": "a505ae67272f69523ab4bcfc8e224acae9c58e2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/9b84a6ba7fe48bdde69425e376389459807ca9af",
-                "reference": "9b84a6ba7fe48bdde69425e376389459807ca9af",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/a505ae67272f69523ab4bcfc8e224acae9c58e2e",
+                "reference": "a505ae67272f69523ab4bcfc8e224acae9c58e2e",
                 "shasum": ""
             },
             "require": {
@@ -681,7 +681,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-10-11T14:34:36+00:00"
+            "time": "2026-10-11T16:20:49+00:00"
         },
         {
             "name": "craftcms/cms-assets",
@@ -689,12 +689,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms-assets.git",
-                "reference": "75beb4c037ede1b7fee39da762db28d6a5202104"
+                "reference": "b222e5e1715a0e85a554241fc477b326d3a9155a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/75beb4c037ede1b7fee39da762db28d6a5202104",
-                "reference": "75beb4c037ede1b7fee39da762db28d6a5202104",
+                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/b222e5e1715a0e85a554241fc477b326d3a9155a",
+                "reference": "b222e5e1715a0e85a554241fc477b326d3a9155a",
                 "shasum": ""
             },
             "default-branch": true,
@@ -707,7 +707,7 @@
             "support": {
                 "source": "https://github.com/craftcms/cms-assets/tree/6.x"
             },
-            "time": "2026-10-11T14:36:04+00:00"
+            "time": "2026-10-11T16:23:05+00:00"
         },
         {
             "name": "craftcms/laravel-aliases",
