@@ -11,8 +11,8 @@ export default defineConfig({
             fonts: [
                 bunny('Inter', {
                     alias: 'sans',
-                    weights: [400, 500, 600, 700],
-                    styles: ['normal', 'italic'],
+                    weights: [400, 600, 700],
+                    styles: ['normal'],
                     subsets: ['latin'],
                     display: 'swap',
                     preload: [{ weight: 400 }, { weight: 700 }],

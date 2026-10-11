@@ -28,7 +28,6 @@
             <flux:button
                 variant="ghost"
                 size="xs"
-                tooltip="Login"
                 href="{{ route('login', ['redirect' => request()->fullUrl()]) }}"
             >
                 Login
