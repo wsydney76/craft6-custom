@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h1>{{ entry.title }}</h1>
+
+<ul>
+    {% for article in articles %}
+    	<li>{{ article.link }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

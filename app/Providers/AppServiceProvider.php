@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Providers;
+
+use App\Mixins\ArticleMixin;
+use App\View\Composers\ArticleOfTheDayComposer;
+use App\View\Composers\FooterComposer;
+use CraftCms\Cms\Entry\Elements\Entry;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        View::composer(
+            ['components.partials.article-of-the-day', 'components.layouts.footer'],
+            ArticleOfTheDayComposer::class,
+        );
+        View::composer('components.layouts.footer', FooterComposer::class);
+
+        Entry::mixin(new ArticleMixin());
+    }
+}
