@@ -1,0 +1,46 @@
+{% set title = entry.title ?? title ?? 'Craft CMS' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>{{ title }}</title>
+
+    {{ blade('components.layouts.head') }}
+</head>
+<body class="bg-zinc-50 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+
+<a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-zinc-900 focus:shadow-lg"
+>
+    Skip to content
+</a>
+
+<header class="mx-auto mb-8 max-w-5xl py-2">
+    {# <livewire:layouts.nav /> #}
+
+    {{ t2b_livewire('layouts.nav') }}
+
+    {{ blade('components.layouts.featured-image', {image: entry.image.first}) }}
+</header>
+
+<main id="main-content" class="mx-auto px-4 max-w-3xl">
+
+    <div class="prose dark:prose-invert mb-8">
+        <h1>{{ entry.title }}</h1>
+    </div>
+
+    {% block body %}{% endblock %}
+
+
+</main>
+
+<div class="mx-auto mt-8 max-w-5xl border-t border-gray-500 px-4">
+
+    {{ blade('components.layouts.footer') }}
+
+</div>
+</body>
+</html>

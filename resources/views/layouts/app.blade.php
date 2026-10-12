@@ -16,11 +16,7 @@
 
         <title>{{ $entry->title ?? ($title ?? config('app.name')) }}</title>
 
-        @fonts
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        @fluxAppearance
-        @livewireStyles
+        <x-layouts.head />
     </head>
     <body class="bg-zinc-50 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
         <a
@@ -60,7 +56,5 @@
         </main>
 
         <x-layouts.footer class="mx-auto mt-8 max-w-5xl border-t border-gray-500 px-4" />
-
-        @fluxScripts
     </body>
 </html>

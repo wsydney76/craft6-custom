@@ -44,3 +44,5 @@
         @endif
     </div>
 </footer>
+
+@fluxScripts

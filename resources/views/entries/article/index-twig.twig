@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-<h1>{{ entry.title }}</h1>
+{% extends "layouts/main" %}
 
-<ul>
-    {% for article in articles %}
-    	<li>{{ article.link }}</li>
-    {% endfor %}
-</ul>
 
-</body>
-</html>
+{% block body %}
+    <ul>
+        {% for article in articles %}
+            <li>
+                <a href="{{ article.url }}?format=twig">
+                    {{ article.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="mt-8">
+        {{ articles.links()|raw }}
+    </div>
+
+{% endblock %}

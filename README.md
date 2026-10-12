@@ -112,6 +112,12 @@ For articles (index and show pages), added simplified content representations fo
 
 Installed `barryvdh/laravel-dompdf` for PDF generation.
 
+### Twig
+
+* Added `layouts/main.twig` template as example for a Twig layout.
+* Added `entries/article/index-twig.twig``, `entries/article/show-twig.twig` template as example for a Twig entry template.
+* Added `App\Support\BladeTwigextension` class with a `t2b_livewire()` function, that supports including Livewire components from Twig.
+
 ### Livewire/Flux
 
 Added Livewire and Flux (free) to the project.
@@ -152,7 +158,7 @@ Installed Pest for testing.
 * Added a `tests/Feature/NotificationsPageLivewireTest.php` test.
 * Added a `tests/Feature/ArticleShowPageTest.php` test.
 * Added a `tests/Feature/ArticleShowFormatsTest.php` test.
-* Added a `tests/Feature/HomeControllerTest.php` test.
+* Added a `tests/Feature/ArticleOfTheDayComposerTest.php` test.
 
 Run with `artisan test`.
 

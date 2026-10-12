@@ -27,6 +27,10 @@ class ArticleController
 
         $articles = Entry::find()->section('article')->latest('postDate')->paginate(12);
 
+        if ($format !== 'html') {
+            $articles->appends(['format' => $format]);
+        }
+
         return match ($format) {
             'html' => view('entries.article.index', compact('entry', 'articles')),
             'json' => response()->json($articles, options: JSON_PRETTY_PRINT),
