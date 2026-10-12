@@ -69,6 +69,11 @@ class ArticleController
                 ['entry' => $entry],
                 templateMode: TemplateMode::Site, // required for pest tests
             ),
+            'livewire' => view('livewire-wrapper', [
+                'livewireComponent' => 'pages::edit-article',
+                'title' => 'Edit Article',
+                'data' => ['entry' => $entry],
+            ]),
             default => throw new \InvalidArgumentException("Invalid format [$format]."),
         };
     }

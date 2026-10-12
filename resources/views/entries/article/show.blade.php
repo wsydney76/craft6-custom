@@ -24,6 +24,11 @@
             <flux:button variant="filled" size="xs" href="?format=twig">
                 Render with Twig
             </flux:button>
+            @can('save', $entry)
+                <flux:button variant="filled" size="xs" href="?format=livewire">
+                    Edit with Livewire
+                </flux:button>
+            @endcan
         </div>
 
         <x-latest-articles heading="More Latest Articles" :exclude="$entry" />

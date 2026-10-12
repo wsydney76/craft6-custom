@@ -44,5 +44,5 @@
         @endif
     </div>
 </footer>
-
+<flux:toast invert position="top center" />
 @fluxScripts
