@@ -110,7 +110,7 @@ new class extends Component {
                 @endforelse
             </ul>
 
-            {{ $this->entries->links() }}
+            {{ $this->entries->links(data: ['scrollTo' => false]) }}
         </flux:card.body>
     </flux:card>
 </div>
