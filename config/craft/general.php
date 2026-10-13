@@ -29,6 +29,7 @@ return GeneralConfig::create()
 
     // === Custom settings ===
 
+    ->privateTemplateTrigger('')
     ->revAssetUrls()
     ->convertFilenamesToAscii()
     ->limitAutoSlugsToAscii()
