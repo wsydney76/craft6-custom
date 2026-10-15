@@ -1,0 +1,91 @@
+allowLineBreaksInTitles: false
+color: red
+description: 'Dummy for testing only'
+fieldLayouts:
+  92486234-8a2e-42fd-afbb-6ae163631bc5:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:f9712f70-1f27-4649-b212-414ce7185567'
+    tabs:
+      - elementCondition: null
+        elements:
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-15T08:24:06+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            instructionsPosition: before
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\Entries\EntryTitleField
+            uid: 7c7d9f90-04c1-4227-90eb-5907e2c0a1cf
+            userCondition: null
+            warning: null
+            width: 100
+          - dateAdded: '2026-10-15T08:25:52+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 019e1627-dbcc-70f4-9cca-4316474768e3 # Single Line Text
+            handle: name
+            instructions: null
+            instructionsPosition: before
+            label: Name
+            oldFieldUid: 019e1627-dbcc-70f4-9cca-4316474768e3 # Single Line Text
+            required: true
+            tip: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField
+            uid: f9712f70-1f27-4649-b212-414ce7185567
+            userCondition: null
+            warning: null
+            width: 100
+          - dateAdded: '2026-10-15T08:25:52+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 019e02e9-af69-702d-8c7b-319a5387ae69 # Multi Line Text
+            handle: body
+            instructions: null
+            instructionsPosition: before
+            label: Body
+            oldFieldUid: 019e02e9-af69-702d-8c7b-319a5387ae69 # Multi Line Text
+            required: false
+            tip: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField
+            uid: 761371a3-2704-4c02-b85e-d7bf6a8bdaf1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b44fc8eb-170b-4f6d-91f7-5ae22a2e1b7e
+        userCondition: null
+    thumbFieldKey: null
+handle: test
+hasTitleField: true
+icon: microscope
+name: Test
+showExpiryDateField: true
+showPostDateField: true
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -48,6 +48,8 @@ Added an `Articles` channel section with an `Article` entry type (title, image, 
 
 Added a `Content Builder` matrix field with `Text`, `Image`, and `Heading` block types.
 
+Added a `Test` section with a `Test` entry type (title, body fields) for playing around without touching 'real' content.
+
 ### Assets
 
 Added an `images` asset volume  with `public/images` root directory.
@@ -189,6 +191,13 @@ Note: Prettier may mess up comments in `@props` directives, so we follow the con
 Dropped `laravel-pint`.
 
 Added `FauxCraft` file to enable autocompletion for often used variables in templates, such as `$entry`, `$image`, etc.
+
+## Tests/Proofs of Concept
+
+Some tests and proofs of concept are included in the `tests` directory, including:
+
+* `create-entry` test for creating an entry via the Craft's own action.
+* `imager` test as example for using Imager X from Blade templates via `Support\helpers.php` helper functions. (Plugin not included, as it is paid software. Install yourself if you try that out.)
 
 ## AI Support
 

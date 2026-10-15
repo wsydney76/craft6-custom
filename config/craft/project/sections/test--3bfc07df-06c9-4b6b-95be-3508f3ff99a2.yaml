@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - uid: 332b43ec-c347-4052-a5cd-01572be081d3 # Test
+handle: test
+maxAuthors: 1
+minAuthors: 1
+name: Test
+previewTargets:
+  - label: 'Primary entry page'
+    refresh: true
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  d0261b43-45c5-4ee4-96dd-b74042705196: # Default
+    enabledByDefault: true
+    hasUrls: true
+    route: null
+    template: entries/test/show
+    uriFormat: 'test/{slug}'
+type: channel
+workflow: null
