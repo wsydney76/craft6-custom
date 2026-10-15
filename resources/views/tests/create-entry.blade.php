@@ -1,6 +1,5 @@
 @php
     use CraftCms\Cms\Support\Html;
-    use Illuminate\Contracts\Auth\Guard;
     $section = Sections::getSectionByHandle('test');
     $type = EntryTypes::getEntryTypeByHandle('test');
     abort_unless($section && $type, 500);
