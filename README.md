@@ -199,6 +199,12 @@ Some tests and proofs of concept are included in the `tests` directory, includin
 * `create-entry` test for creating an entry via the Craft's own action.
 * `imager` test as example for using Imager X from Blade templates via `Support\helpers.php` helper functions. (Plugin not included, as it is paid software. Install yourself if you try that out.)
 
+## CP Styles
+
+Provisionally added some custom styles for the control panel in `resources/css/cp.css`. Enable in `app/Providers/AppServiceProvider.php` by uncommenting the `pushMiddleware` line.
+
+> Just playing around for now, at the time of writing, CP styles are still in flow, and no 'official' way of theming the CP is available yet.
+
 ## AI Support
 
 Not yet. In local dialect: 
