@@ -1,4 +1,4 @@
-dateModified: 1792052846
+dateModified: 1792138250
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -89,7 +89,7 @@ system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.24
+  schemaVersion: 6.0.0.25
   timeZone: $TZ
 users:
   allowPublicRegistration: false
