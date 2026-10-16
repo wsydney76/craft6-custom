@@ -21,9 +21,8 @@
     @endsession
 
     <form method="post" class="space-y-4">
-        @csrf
-
-        {!! Html::hiddenInput('action', 'entries/save-entry') !!}
+        {!! Html::csrfInput() !!}
+        {!! Html::actionInput('entries/save-entry') !!}
         {!! Html::hiddenInput('sectionId', $section->id) !!}
         {!! Html::hiddenInput('typeId', $type->id) !!}
         {!! Html::successMessageInput('Thank you for your contribution!') !!}
