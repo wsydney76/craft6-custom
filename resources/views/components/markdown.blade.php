@@ -7,4 +7,6 @@
     'text',
 ])
 
-{!! Markdown::parse($text) |> HtmlSanitizers::sanitize(...) !!}
+@if ($text)
+    {!! Markdown::parse($text) |> HtmlSanitizers::sanitize(...) !!}
+@endif
