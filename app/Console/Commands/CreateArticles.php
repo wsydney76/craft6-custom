@@ -7,6 +7,7 @@ use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use Database\Seeders\CreateArticlesSeeder;
 use RuntimeException;
+use function Laravel\Prompts\confirm;
 
 #[Signature('seed:create-articles')]
 #[Description('Creates dummy articles')]
@@ -22,7 +23,7 @@ class CreateArticles extends Command
 
         if (
             $this->input->isInteractive() &&
-            !$this->confirm("Create {$images->count()} entries of type 'article'?")
+            !confirm("Create {$images->count()} entries of section 'Article'?")
         ) {
             return self::FAILURE;
         }

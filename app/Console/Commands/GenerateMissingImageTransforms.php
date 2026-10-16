@@ -7,6 +7,7 @@ use Illuminate\Console\Attributes\Description;
 use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
+use function Laravel\Prompts\confirm;
 
 #[Signature('entries:generate-missing-image-transforms')]
 #[Description('Fetches all entries with a non-empty URI once to trigger missing image transforms')]
@@ -15,7 +16,7 @@ class GenerateMissingImageTransforms extends Command
     public function handle(): int
     {
         if (
-            !$this->confirm(
+            !confirm(
                 'This will fetch all entries to trigger missing image transforms. Do you want to continue?',
             )
         ) {
