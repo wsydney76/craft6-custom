@@ -1,4 +1,30 @@
-dateModified: 1792138250
+ai:
+  defaults:
+    text:
+      model: null
+      provider: null
+  tasks:
+    'craft:altText':
+      enabled: $AI_ENABLED
+      model: null
+      provider: $AI_PROVIDER
+    'craft:focalPoint':
+      enabled: $AI_ENABLED
+      model: null
+      provider: $AI_PROVIDER
+    'craft:imageType':
+      enabled: $AI_ENABLED
+      model: null
+      provider: $AI_PROVIDER
+    'craft:tagImage':
+      enabled: $AI_ENABLED
+      model: null
+      provider: $AI_PROVIDER
+    'craft:title':
+      enabled: $AI_ENABLED
+      model: null
+      provider: $AI_PROVIDER
+dateModified: 1793265174
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -89,7 +115,7 @@ system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.25
+  schemaVersion: 6.0.0.32
   timeZone: $TZ
 users:
   allowPublicRegistration: false

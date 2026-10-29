@@ -37,7 +37,33 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          - attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2026-10-29T09:12:54+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            instructionsPosition: before
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\Assets\AltField
+            uid: c53b7c70-46b6-403a-a19a-02dccfb54c57
+            userCondition: null
+            warning: null
+            width: 100
+        icon: null
         name: Content
+        type: content
         uid: 0cd34862-dc87-4511-b6fa-61ca16dda18f
         userCondition: null
     thumbFieldKey: null
@@ -45,6 +71,7 @@ fs: public
 handle: images
 hasUrls: true
 name: Images
+propagationMethod: custom
 sortOrder: 1
 subpath: images
 titleTranslationKeyFormat: null

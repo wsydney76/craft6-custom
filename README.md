@@ -17,7 +17,7 @@ Clone this repository into a new project directory `git clone https://github.com
 
 > The git repository contains a `seed` DDEV database snapshot, so the setup script skips the Craft CMS installation. If you do not run DDEV v1.25.4+, pull in the seed db via `ddev snapshot restore`, or run `craft install` manually and provide your own content. Create dummy articles by running `artisan seed:create-articles`.
  
-> The seeded database comes with an admin user `admin` with password `craft6-custom`, so you can log in to the control panel immediately after installation.
+> The seeded database comes with an admin user `admin` with password `craft6-custom`, `setup/install` asks for a new password, or change it via `ddev artisan craft:users:set-password admin`.
 
 > Ships with free-to-use images in the `public/images/seed` directory.
 
@@ -70,7 +70,7 @@ While this requires duplicate URI definitions, it enforces a consistent setup.
 
 Using named routes in templates, e.g. `route('articles.index)` makes templates independent of changes to the URI, and/or avoids additional queries, for example, to retrieve the actual URL of a single entry.
 
-Added provisional `login` and `logout` routes.we
+Added provisional `login` and `logout` routes.
 
 ### Templates
 
