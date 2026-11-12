@@ -8,6 +8,14 @@ ai:
       enabled: $AI_ENABLED
       model: null
       provider: $AI_PROVIDER
+    'craft:assistant':
+      enabled: $AI_ENABLED
+      model: null
+      provider: $AI_PROVIDER
+    'craft:chatTitle':
+      enabled: $AI_ENABLED
+      model: null
+      provider: $AI_PROVIDER
     'craft:focalPoint':
       enabled: $AI_ENABLED
       model: null
@@ -24,7 +32,7 @@ ai:
       enabled: $AI_ENABLED
       model: null
       provider: $AI_PROVIDER
-dateModified: 1793265174
+dateModified: 1794473158
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -83,8 +91,8 @@ mcp:
   publicSiteHandles:
     - default
   publicTools:
-    - craft-context-get
-    - craft-query
+    - craft_context_get
+    - craft_query
   publicVolumeHandles:
     - images
 meta:
@@ -110,12 +118,11 @@ meta:
     d1b40666-8b39-4ce4-b084-1b6f782aea9e: Home # Home
     dd84d747-4f3d-4c6c-bb91-014e050ed11e: Default # Default
     fa25ff96-88dd-4065-a4c8-c2f710b17247: Images # Images
-    fad52ce1-f8eb-4e3c-877c-ff2e7885a850: 'Images Transformer' # Images Transformer
 system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.32
+  schemaVersion: 6.0.0.36
   timeZone: $TZ
 users:
   allowPublicRegistration: false

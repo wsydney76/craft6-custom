@@ -1,40 +1,74 @@
+/*
+    Custom CSS for Craft 6 Control Panel
+
+    Work in progress, experimental, just a few tweaks when we stumbled upon some things.
+
+    Based on Craft 6 alpha, so might break with future updates.
+*/
+
 :root:not([data-theme='dark']) {
+    /* No white backbround */
     --c-surface-default: #e4edf6; /* #F9FBFB matches Filament, #E4EDF6 matches Craft5 */
-    --c-surface-sunken: #d8e2ee; /* #F1F5F9 matches Filament, #D8E2EE matches Craft5 */
-    --c-color-accent-fill-loud: #b91c1c; /* #FE9A00 matches Filament, #B91C1C matches Craft 5 */
-    --c-font-body: Inter;
+    --c-surface-sunken: #f1f6fb; /* #F1F5F9 matches Filament, #D8E2EE matches Craft5 */
+
+    /* Button color, stay with the blue button color, reserve red for destructive operations */
+    /* --c-color-accent-fill-loud: #b91c1c;  #FE9A00 matches Filament, #B91C1C matches Craft 5 */
+
+    /* We elderly can't read small fonts. */
+    --text-xs: 14px;
+
+
+    .cp-content craft-chip::part(chip), .dashboard-grid craft-card::part(body) {
+        background-color: rgba(255,255,255,70%) !important;
+    }
 }
 
+/* Remove box shadows from all elements, that looks like dirt on the screen */
+* {
+    box-shadow: none !important;
+}
+
+/* Don't inherit from button color */
 html:not([data-theme='dark']) craft-switch-button {
     --c-color-accent-fill-loud: oklch(52.7% 0.154 150.069);
 }
 
+
+/* Let top level actions stand out */
 .cp-content-view > .cp-container [variant='plain'] {
     background-color: #bccbdc;
     margin: 0 2px;
 }
+
 html[data-theme='dark'] .cp-content-view > .cp-container [variant='plain'] {
     background-color: #171d2b;
     margin: 0 2px;
 }
 
+
+/* Don't let tables inherit a colored background */
 html:not([data-theme='dark']) .element-index__body table {
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
-html:not([data-theme='dark']) input,
+/* Make input fields more readable, don't use full colored background in matrix */
+html:not([data-theme='dark']) input:not([type='radio']),
 html:not([data-theme='dark']) textarea,
+html:not([data-theme='dark']) .overtype-wrapper textarea.overtype-input,
 html:not([data-theme='dark']) select {
     box-shadow: none;
     font-size: 15px;
     line-height: 24px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7) !important;
     color: black !important;
 }
 
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/inter-400-normal.woff2') format('woff2');
+/* Let texareas grow */
+textarea {
+    max-height: none !important;
+}
+
+/* Make the label links in cards more readable */
+.card-heading .label-link span {
+    font-size: 16px;
 }

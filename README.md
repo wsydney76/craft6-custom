@@ -7,7 +7,7 @@ For a more basic starter without content model and any examples, see [Craft 6 Ba
 
 ## Disclaimer
 
-Craft 6 is still in alpha, so anything may break anytime.
+Craft 6 is still in beta, so anything may break anytime.
 
 ## Installation
 
@@ -205,7 +205,7 @@ Some tests and proofs of concept are included in the `tests` directory, includin
 
 ## CP Styles
 
-Provisionally added some custom styles for the control panel in `resources/css/cp.css`. Enable in `app/Providers/AppServiceProvider.php` by uncommenting the `pushMiddleware` line.
+Provisionally added some custom styles for the control panel in `resources/css/cp.css`. Disable in `app/Providers/AppServiceProvider.php` by uncommenting related lines.
 
 > Just playing around for now, at the time of writing, CP styles are still in flow, and no 'official' way of theming the CP is available yet.
 
@@ -214,3 +214,5 @@ Provisionally added some custom styles for the control panel in `resources/css/c
 Not yet. In local dialect: 
 
 > Mia glangt dass i woas das i kannt wann i woin dad. Aber i duas ned, weil i muas ned.
+
+But you can add provider/key to  `.env`

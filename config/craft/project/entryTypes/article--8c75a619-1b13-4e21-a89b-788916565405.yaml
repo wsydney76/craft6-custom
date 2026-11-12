@@ -4,6 +4,7 @@ description: null
 fieldLayouts:
   f1eb6084-4ca4-4e26-9d6f-8022cca6c0b1:
     cardThumbAlignment: end
+    cardThumbStyle: cover
     cardView:
       - dateCreated
       - 'layoutElement:822a7287-3023-4a8a-8731-3ca6867d2f49'
@@ -89,10 +90,13 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+        icon: null
         name: Content
+        type: content
         uid: 1bba0cb8-11c0-45cc-96c8-b648e47b8e39
         userCondition: null
-    thumbFieldKey: 'layoutElement:57eaf5a0-0a2c-41c1-bc98-144b0467e1ab'
+    thumbSources:
+      - 'layoutElement:57eaf5a0-0a2c-41c1-bc98-144b0467e1ab'
 handle: article
 hasTitleField: true
 icon: book-blank

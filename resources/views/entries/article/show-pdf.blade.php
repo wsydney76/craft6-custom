@@ -2,6 +2,8 @@
 <html>
     <head></head>
     <body>
+        <p>This document is completely unstyled.</p>
+
         <x-layouts.featured-image :image="$entry->image->first()" />
 
         <h1>{{ $entry->title }}</h1>

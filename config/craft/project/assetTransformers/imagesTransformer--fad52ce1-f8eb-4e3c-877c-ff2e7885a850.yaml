@@ -1,8 +1,0 @@
-driver: craft
-handle: imagesTransformer
-name: 'Images Transformer'
-settings:
-  disk: public
-  generateTransformsBeforePageLoad: true
-  hasUrls: true
-  subpath: dist/transforms/images
