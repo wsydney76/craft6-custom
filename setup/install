@@ -18,6 +18,6 @@ ddev npm run build &&
 echo Set password for admin user:
 ddev artisan craft:users:set-password admin
 ddev describe &&
-ddev artisan entries:generate-missing-image-transforms
+# ddev artisan entries:generate-missing-image-transforms
 ddev launch
 

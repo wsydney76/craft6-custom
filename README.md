@@ -62,6 +62,8 @@ Added an `Images Transformer` asset transformer with `public/dist/transforms/ima
 
 > Convention: Set up a dedicated asset transformer for each asset volume to match paths.
 
+TODO: This has changed in Craft 6 beta. Cleanup and adjust to new conventions.
+
 ### Routing
 
 Using named routes for entries, pointing to controller actions.
