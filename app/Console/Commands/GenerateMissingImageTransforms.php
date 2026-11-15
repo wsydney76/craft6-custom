@@ -17,7 +17,7 @@ class GenerateMissingImageTransforms extends Command
     {
         if (
             !confirm(
-                'This will fetch all entries to trigger missing image transforms. Do you want to continue?',
+                'Fetch all entries to trigger creating missing image transforms in the background?',
             )
         ) {
             $this->line('Operation cancelled.');
