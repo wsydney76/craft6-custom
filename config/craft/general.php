@@ -33,4 +33,5 @@ return GeneralConfig::create()
     ->revAssetUrls()
     ->convertFilenamesToAscii()
     ->limitAutoSlugsToAscii()
-    ->optimizeImageFilesize(false);
+    ->optimizeImageFilesize(false)
+    ->trashedAssetDisk('trashed-assets');

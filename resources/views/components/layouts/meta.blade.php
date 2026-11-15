@@ -7,5 +7,5 @@
 @endphp
 
 <flux:card size="sm">
-    Created by {{ $entry->author->name }}, {{ $entry->postDate->diffForHumans() }}.
+    Created by {{ $entry->author->fullName }}, {{ $entry->postDate->diffForHumans() }}.
 </flux:card>

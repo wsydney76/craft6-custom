@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Data\ContactDTO;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
@@ -14,7 +15,7 @@ class ContactNotification extends Notification
     /**
      * Create a new notification instance.
      */
-    public function __construct(public string $name, public string $email, public string $message)
+    public function __construct(public ContactDTO $data)
     {
         //
     }
@@ -40,10 +41,10 @@ class ContactNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return new MailMessage()
-            ->subject('Message from ' . $this->name)
-            ->line('Name: ' . $this->name)
-            ->line('Email: ' . $this->email)
-            ->line(new HtmlString(nl2br(e($this->message))));
+            ->subject('Message from ' . $this->data->name)
+            ->line('Name: ' . $this->data->name)
+            ->line('Email: ' . $this->data->email)
+            ->line(new HtmlString(nl2br(e($this->data->message))));
     }
 
     /**
@@ -54,9 +55,9 @@ class ContactNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'name' => $this->name,
-            'email' => $this->email,
-            'message' => $this->message,
+            'name' => $this->data->name,
+            'email' => $this->data->email,
+            'message' => $this->data->message,
         ];
     }
 }

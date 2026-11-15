@@ -32,7 +32,7 @@ ai:
       enabled: $AI_ENABLED
       model: null
       provider: $AI_PROVIDER
-dateModified: 1794473158
+dateModified: 1794731207
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -117,12 +117,13 @@ meta:
     d0261b43-45c5-4ee4-96dd-b74042705196: Default # Default
     d1b40666-8b39-4ce4-b084-1b6f782aea9e: Home # Home
     dd84d747-4f3d-4c6c-bb91-014e050ed11e: Default # Default
+    e20a0e54-a9a5-42ba-9550-d86e84e067c3: 'Public Schema' # Public Schema
     fa25ff96-88dd-4065-a4c8-c2f710b17247: Images # Images
 system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.36
+  schemaVersion: 6.0.0.38
   timeZone: $TZ
 users:
   allowPublicRegistration: false

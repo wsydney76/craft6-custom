@@ -41,7 +41,7 @@ class NavigationData
                 'label' => 'Notifications',
                 'url' => route('notifications'),
                 'current' => request()->is('notifications'),
-                'badge' => auth()->user()->unreadNotifications->count(),
+                'badge' => auth()->user()->unreadNotifications->filter(fn($n) => $n->type === 'contact-notification' )->count(),
             ];
         }
 

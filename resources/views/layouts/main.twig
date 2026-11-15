@@ -7,7 +7,7 @@
 
     <title>{{ title }}</title>
 
-    {{ blade('components.layouts.head') }}
+    {#{{ blade('components.layouts.head') }}#}
 </head>
 <body class="bg-zinc-50 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
 
@@ -20,8 +20,10 @@
 
 <header class="mx-auto mb-8 max-w-5xl py-2">
     {# <livewire:layouts.nav /> #}
+    {{ fonts() }}
+    {{ vite(['resources/css/app.css', 'resources/js/app.js']) }}
 
-    {{ t2b_livewire('layouts.nav') }}
+    {{ blade('layouts.nav') }}
 
     {{ blade('components.layouts.featured-image', {image: entry.image.first}) }}
 </header>

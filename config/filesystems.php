@@ -47,6 +47,14 @@ return [
             'report' => false,
         ],
 
+        'trashed-assets' => [
+            'driver' => 'local',
+            'root' => storage_path('app/trashed-assets'),
+            'serve' => false,
+            'throw' => false,
+            'report' => false,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

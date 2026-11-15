@@ -21,10 +21,7 @@ class BladeTwigExtension extends AbstractExtension
         // Define custom Twig functions
         // (see https://twig.symfony.com/doc/3.x/advanced.html#functions)
         return [
-            new TwigFunction('t2b_livewire', function (
-                string $component,
-                array $data = [],
-            ): Markup {
+            new TwigFunction('livewire', function (string $component, array $data = []): Markup {
                 $arrayString = var_export($data, true);
                 return Template::raw(Blade::render("@livewire('$component', $arrayString)"));
             }),

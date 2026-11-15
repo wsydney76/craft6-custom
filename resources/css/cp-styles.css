@@ -3,13 +3,13 @@
 
     Work in progress, experimental, just a few tweaks when we stumbled upon some things.
 
-    Based on Craft 6 alpha, so might break with future updates.
+    Based on Craft 6 beta, so might break with future updates.
 */
 
 :root:not([data-theme='dark']) {
     /* No white backbround */
-    --c-surface-default: #e4edf6; /* #F9FBFB matches Filament, #E4EDF6 matches Craft5 */
-    --c-surface-sunken: #f1f6fb; /* #F1F5F9 matches Filament, #D8E2EE matches Craft5 */
+    --c-surface-default: #FAFCFE; /* #F9FBFB matches Filament, #E4EDF6 matches Craft5 */
+    /*--c-surface-sunken: #f1f6fb;*/ /* #F1F5F9 matches Filament, #D8E2EE matches Craft5 */
 
     /* Button color, stay with the blue button color, reserve red for destructive operations */
     /* --c-color-accent-fill-loud: #b91c1c;  #FE9A00 matches Filament, #B91C1C matches Craft 5 */
@@ -18,6 +18,7 @@
     --text-xs: 14px;
 
 
+    /* Make the chip and card stand out a bit on colored background */
     .cp-content craft-chip::part(chip), .dashboard-grid craft-card::part(body) {
         background-color: rgba(255,255,255,70%) !important;
     }
@@ -35,7 +36,7 @@ html:not([data-theme='dark']) craft-switch-button {
 
 
 /* Let top level actions stand out */
-.cp-content-view > .cp-container [variant='plain'] {
+/*.cp-content-view > .cp-container [variant='plain'] {
     background-color: #bccbdc;
     margin: 0 2px;
 }
@@ -44,7 +45,7 @@ html[data-theme='dark'] .cp-content-view > .cp-container [variant='plain'] {
     background-color: #171d2b;
     margin: 0 2px;
 }
-
+*/
 
 /* Don't let tables inherit a colored background */
 html:not([data-theme='dark']) .element-index__body table {

@@ -1,6 +1,8 @@
 <?php
 
+use App\Data\ContactDTO;
 use App\Notifications\ContactNotification;
+use App\Notifications\CpContactNotification;
 use CraftCms\Cms\Entry\Elements\Entry;
 use CraftCms\Cms\Route\CurrentElement;
 use CraftCms\Cms\User\Elements\User;
@@ -21,6 +23,7 @@ new class extends Component {
 
     public string $title = '';
     public string $body = '';
+    public ?int $imageId = null;
 
     #[Validate('string|required|min:3|max:255', as: 'Your name')]
     public string $name = '';
@@ -39,6 +42,7 @@ new class extends Component {
     {
         if ($entry) {
             [$this->title, $this->body] = [$entry->title, $entry->body ?? ''];
+            $this->imageId = $entry->image?->first()?->id;
         }
     }
 
@@ -49,6 +53,9 @@ new class extends Component {
 
     public function send(): void
     {
+        $user = User::find()->first();
+        $data = ContactDTO::make($this->name, $this->email, $this->message);
+
         $this->normalizeValues();
         $this->validate();
 
@@ -56,11 +63,13 @@ new class extends Component {
         $this->state = '';
 
         // There is only one user in Craft Solo...
-        $user = User::find()->first();
+
 
         // We do not use queued notifications with retries in this demo, so we have to do error handling here.
         try {
-            $user->notify(new ContactNotification($this->name, $this->email, $this->message));
+            // Using to
+            $user->notify(new ContactNotification($data));
+            Notification::send($user, new CpContactNotification($data));
         } catch (\Throwable $e) {
             report($e);
             $this->state = 'error';
@@ -96,6 +105,10 @@ new class extends Component {
 ?>
 
 <div class="space-y-8">
+    <x-slot:featured>
+        <x-layouts.featured-image :image="$imageId" />
+    </x-slot>
+
     @if ($body)
         <x-markdown :text="$body" />
     @endif

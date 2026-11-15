@@ -3,6 +3,8 @@
     'title' => null,
     'featured' => null,
     'size' => 'md',
+    'editUrl' => null,
+    'loadFilament' => false,
 ])
 @php
     $title ??= $entry->title ?? ($title ?? config('app.name'));
@@ -16,7 +18,11 @@
 
         <title>{{ $entry->title ?? ($title ?? config('app.name')) }}</title>
 
-        <x-layouts.head />
+        @if ($loadFilament)
+            @filamentStyles
+        @endif
+
+        <x-layouts.head :$loadFilament />
     </head>
     <body class="bg-zinc-50 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
         <a
@@ -27,7 +33,7 @@
         </a>
 
         <header class="mx-auto mb-8 max-w-5xl py-2">
-            <livewire:layouts.nav />
+            <x-layouts.nav />
 
             @if ($featured)
                 {{ $featured }}
@@ -44,8 +50,9 @@
                 'max-w-5xl' => $size === 'lg',
             ])
         >
-            <x-prose class="mb-8">
+            <x-prose class="flex max-w-none justify-between">
                 <h1>{{ $title }}</h1>
+                <div id="titleslot"></div>
             </x-prose>
 
             @if ($slot->isNotEmpty())
@@ -55,6 +62,9 @@
             @endif
         </main>
 
-        <x-layouts.footer class="mx-auto mt-8 max-w-5xl border-t border-gray-500 px-4" />
+        <x-layouts.footer :$editUrl class="mx-auto mt-8 max-w-5xl border-t border-gray-500 px-4" />
+        @if ($loadFilament)
+            @filamentScripts
+        @endif
     </body>
 </html>
