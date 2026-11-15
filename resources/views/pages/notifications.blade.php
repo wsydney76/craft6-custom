@@ -78,7 +78,10 @@ new #[Title('Notifications')] class extends Component {
     </flux:radio.group>
 
     @forelse ($this->notifications as $notification)
-        <flux:card class="flex justify-between gap-4 space-y-4">
+        <flux:card
+            wire:key="notification-{{ $notification->id }}"
+            class="flex justify-between gap-4 space-y-4"
+        >
             <div>
                 Date: {{ $notification->created_at->format('Y-m-d H:i') }}
                 <br />
