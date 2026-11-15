@@ -32,16 +32,17 @@ ai:
       enabled: $AI_ENABLED
       model: null
       provider: $AI_PROVIDER
-dateModified: 1794731207
+dateModified: 1794760219
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
         - postDate
         - desc
       defaultViewMode: table
-      disabled: false
+      disabled: true
       key: '*'
       page: Entries
+      showBadgeCount: false
       tableAttributes:
         - status
         - section
@@ -54,17 +55,55 @@ elementSources:
         - asc
       defaultViewMode: table
       disabled: false
-      key: singles
+      key: 'section:d1b40666-8b39-4ce4-b084-1b6f782aea9e' # Home
       page: Entries
+      showBadgeCount: false
       tableAttributes:
         - status
-        - section
         - link
       type: native
-    - heading: Channels
+    - defaultSort:
+        - title
+        - asc
+      defaultViewMode: table
+      disabled: false
+      key: 'section:87a488b7-81cd-4edf-abb6-22c1e7f2b36c' # Contact
+      page: Entries
+      showBadgeCount: false
+      tableAttributes:
+        - status
+        - link
+      type: native
+    - defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: table
+      disabled: false
+      key: 'section:3bfc07df-06c9-4b6b-95be-3508f3ff99a2' # Test
+      page: Entries
+      showBadgeCount: false
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    - heading: Articles
       key: 'heading:c80c9ee7-862c-41ab-9612-ee033975ae88'
       page: Entries
       type: heading
+    - defaultSort:
+        - title
+        - asc
+      defaultViewMode: table
+      disabled: false
+      key: 'section:cd0de69b-34b4-4a90-8c48-6a3daa624aa0' # Article Index
+      page: Entries
+      showBadgeCount: false
+      tableAttributes:
+        - status
+        - link
+      type: native
     - defaultSort:
         - postDate
         - desc
@@ -72,10 +111,23 @@ elementSources:
       disabled: false
       key: 'section:90a86bc2-6e67-4370-889e-314a3736fc2d' # Article
       page: Entries
+      showBadgeCount: false
       tableAttributes:
         - status
         - 'fieldInstance:822a7287-3023-4a8a-8731-3ca6867d2f49'
         - postDate
+        - link
+      type: native
+    - defaultSort:
+        - title
+        - asc
+      defaultViewMode: table
+      disabled: false
+      key: 'section:18007da3-6f17-4249-b66c-a3d092378d4b' # Search
+      page: Entries
+      showBadgeCount: false
+      tableAttributes:
+        - status
         - link
       type: native
 mcp:
@@ -123,7 +175,7 @@ system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.38
+  schemaVersion: 6.0.0.39
   timeZone: $TZ
 users:
   allowPublicRegistration: false

@@ -502,12 +502,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "045577865a40e3b3cab916a866cb69506519194f"
+                "reference": "3e09ff65ab4d45b942a7326376283eb73fcebad9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/045577865a40e3b3cab916a866cb69506519194f",
-                "reference": "045577865a40e3b3cab916a866cb69506519194f",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/3e09ff65ab4d45b942a7326376283eb73fcebad9",
+                "reference": "3e09ff65ab4d45b942a7326376283eb73fcebad9",
                 "shasum": ""
             },
             "require": {
@@ -694,8 +694,8 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-11-15T08:35:31+00:00",
-            "published-time": "2026-11-15T08:36:35+00:00"
+            "time": "2026-11-15T15:32:07+00:00",
+            "published-time": "2026-11-15T15:32:17+00:00"
         },
         {
             "name": "craftcms/cms-assets",
@@ -703,12 +703,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms-assets.git",
-                "reference": "e7841ed097e7787e3120605751b0f33177ae2bd6"
+                "reference": "fe3f1bd33abc62805c6e847f5be03dfef7c93ef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/e7841ed097e7787e3120605751b0f33177ae2bd6",
-                "reference": "e7841ed097e7787e3120605751b0f33177ae2bd6",
+                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/fe3f1bd33abc62805c6e847f5be03dfef7c93ef0",
+                "reference": "fe3f1bd33abc62805c6e847f5be03dfef7c93ef0",
                 "shasum": ""
             },
             "default-branch": true,
@@ -721,8 +721,8 @@
             "support": {
                 "source": "https://github.com/craftcms/cms-assets/tree/6.x"
             },
-            "time": "2026-11-15T08:39:05+00:00",
-            "published-time": "2026-11-15T08:39:12+00:00"
+            "time": "2026-11-15T15:34:34+00:00",
+            "published-time": "2026-11-15T15:34:40+00:00"
         },
         {
             "name": "craftcms/laravel-aliases",
@@ -9719,16 +9719,16 @@
         },
         {
             "name": "symfony/polyfill-php85",
-            "version": "v1.43.0",
+            "version": "v1.44.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php85.git",
-                "reference": "86a42cbcc07adc331481a5ab310a4024bfc227f6"
+                "reference": "94c794cb5ba51784bc259f11e9f128593297d8dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php85/zipball/86a42cbcc07adc331481a5ab310a4024bfc227f6",
-                "reference": "86a42cbcc07adc331481a5ab310a4024bfc227f6",
+                "url": "https://api.github.com/repos/symfony/polyfill-php85/zipball/94c794cb5ba51784bc259f11e9f128593297d8dc",
+                "reference": "94c794cb5ba51784bc259f11e9f128593297d8dc",
                 "shasum": ""
             },
             "require": {
@@ -9775,7 +9775,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php85/tree/v1.43.0"
+                "source": "https://github.com/symfony/polyfill-php85/tree/v1.44.0"
             },
             "funding": [
                 {
@@ -9795,8 +9795,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-25T15:46:47+00:00",
-            "published-time": "2026-09-30T10:23:32+00:00"
+            "time": "2026-10-30T15:20:09+00:00",
+            "published-time": "2026-11-15T14:20:22+00:00"
         },
         {
             "name": "symfony/polyfill-php86",
@@ -11802,16 +11802,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "2.5.0",
+            "version": "2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "8a163706bbcac613733dba03f51e13b5eb1bb819"
+                "reference": "e578132c01bd0c64108386ab20d8217cd175ddec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/8a163706bbcac613733dba03f51e13b5eb1bb819",
-                "reference": "8a163706bbcac613733dba03f51e13b5eb1bb819",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/e578132c01bd0c64108386ab20d8217cd175ddec",
+                "reference": "e578132c01bd0c64108386ab20d8217cd175ddec",
                 "shasum": ""
             },
             "require": {
@@ -11862,10 +11862,10 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/2.5.0"
+                "source": "https://github.com/webmozarts/assert/tree/2.5.1"
             },
-            "time": "2026-10-05T23:14:19+00:00",
-            "published-time": "2026-10-05T23:14:25+00:00"
+            "time": "2026-11-15T13:41:13+00:00",
+            "published-time": "2026-11-15T13:41:42+00:00"
         },
         {
             "name": "webonyx/graphql-php",
