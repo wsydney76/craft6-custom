@@ -53,8 +53,6 @@ new class extends Component {
 
     public function send(): void
     {
-        $user = User::find()->first();
-        $data = ContactDTO::make($this->name, $this->email, $this->message);
 
         $this->normalizeValues();
         $this->validate();
@@ -63,20 +61,23 @@ new class extends Component {
         $this->state = '';
 
         // There is only one user in Craft Solo...
-
+        $user = User::find()->first();
+        $data = ContactDTO::make($this->name, $this->email, $this->message);
 
         // We do not use queued notifications with retries in this demo, so we have to do error handling here.
         try {
-            // Using to
+            // Custom notification
             $user->notify(new ContactNotification($data));
+
+            // Example of sending a notification to the Craft Control Panel user
             Notification::send($user, new CpContactNotification($data));
         } catch (\Throwable $e) {
             report($e);
             $this->state = 'error';
             return;
         }
-        $this->state = 'success';
 
+        $this->state = 'success';
         $this->reset('message');
         $this->resetValidation();
     }
