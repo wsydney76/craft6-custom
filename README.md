@@ -38,7 +38,7 @@ Or go back to tagged releases of Craft CMS 6 by changing the version constraints
 
 ### Config
 
-Added a couple of asset-related settings to `config/craft/general.php` to improve image quality, cache busting and ASCII support.
+Added a couple of asset-related settings to `config/craft/general.php` to improve image quality, cache busting, ASCII support and restoring trashed assets.
 
 ### Vite Integration
 
@@ -58,11 +58,7 @@ Added a `Test` section with a `Test` entry type (title, body fields) for playing
 
 Added an `images` asset volume  with `public/images` root directory.
 
-Added an `Images Transformer` asset transformer with `public/dist/transforms/images` root directory.
-
-> Convention: Set up a dedicated asset transformer for each asset volume to match paths.
-
-TODO: This has changed in Craft 6 beta. Cleanup and adjust to new conventions.
+Added a `trashed-assets` disk to `config/craft/filesystems.php` for asset deletion and restoration.
 
 ### Routing
 
