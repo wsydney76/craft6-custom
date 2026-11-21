@@ -32,7 +32,7 @@ ai:
       enabled: $AI_ENABLED
       model: null
       provider: $AI_PROVIDER
-dateModified: 1794760219
+dateModified: 1795255015
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -175,7 +175,7 @@ system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.39
+  schemaVersion: 6.0.0.42
   timeZone: $TZ
 users:
   allowPublicRegistration: false
