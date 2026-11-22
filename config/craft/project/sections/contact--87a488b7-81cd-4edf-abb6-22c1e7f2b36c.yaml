@@ -15,8 +15,8 @@ siteSettings:
   d0261b43-45c5-4ee4-96dd-b74042705196: # Default
     enabledByDefault: true
     hasUrls: true
-    route: contact
-    template: null
+    route: null
+    template: entries/contact/show.blade.php
     uriFormat: contact
 type: single
 workflow: null

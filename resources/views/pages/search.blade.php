@@ -27,22 +27,8 @@ new class extends Component {
     #[Validate('not_regex:/ or /', message: 'The "OR" operator must be uppercase.')]
     public string $search = '';
 
-    // Title/Body of the underlying entry element.
-    // Do not define a public `Entry $entry` property, as Craft's elements are not serializable
-    // and will throw an error when Livewire attempts to serialize the component state.
-    public string $title = '';
-    public string $body = '';
-    public ?int $imageId = null;
-
-    // Pull in the underlying entry element.
-    // The function signature must be exactly as this,
-    // otherwise #[CurrentElement] will not work
-    public function mount(#[CurrentElement] ?Entry $entry = null): void
+    public function mount(): void
     {
-        if ($entry) {
-            [$this->title, $this->body] = [$entry->title, $entry->body ?? ''];
-            $this->imageId = $entry->image?->first()?->id;
-        }
         $this->validate();
     }
 
@@ -58,12 +44,6 @@ new class extends Component {
             ->paginate(12);
     }
 
-    // Set the page title passed to layout dynamically to the underlying entry's title.
-    public function render()
-    {
-        return $this->view()->title($this->title);
-    }
-
     // Goto first page when search term changes
     public function updatedSearch(): void
     {
@@ -77,14 +57,6 @@ new class extends Component {
 --}}
 
 <div class="space-y-8">
-    @if ($body)
-        <x-markdown :text="$body" />
-    @endif
-
-    <x-slot:featured>
-        <x-layouts.featured-image :image="$imageId" />
-    </x-slot>
-
     <flux:card variant="soft" body="divided">
         <flux:card.body class="space-y-4">
             {{--

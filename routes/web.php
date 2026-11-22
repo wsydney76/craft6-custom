@@ -1,18 +1,9 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\HomeController;
+use App\Data\ContactDTO;
 use App\Notifications\ContactNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
-Route::get('/', [HomeController::class, 'show'])->name('home');
-
-Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
-
-Route::livewire('/search', 'pages::search')->name('search');
-Route::livewire('/contact', 'pages::contact')->name('contact');
 
 Route::livewire('/notifications', 'pages::notifications')
     ->middleware('auth')
@@ -34,9 +25,11 @@ Route::get('errors/{template}', function (string $template) {
 
 Route::get('/preview/notification', function () {
     return new ContactNotification(
-        'Sabine Mustermann',
-        'sabine.mustermann@example.com',
-        fake()->paragraphs(3, true),
+        ContactDTO::make(
+            name: 'Sabine Mustermann',
+            email: 'sabine.mustermann@example.com',
+            message: fake()->paragraphs(3, true),
+        ),
     )->toMail(auth()->user());
 })
     ->middleware('auth')

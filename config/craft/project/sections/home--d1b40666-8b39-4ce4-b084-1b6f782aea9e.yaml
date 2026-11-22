@@ -15,7 +15,7 @@ siteSettings:
   d0261b43-45c5-4ee4-96dd-b74042705196: # Default
     enabledByDefault: true
     hasUrls: true
-    route: home
+    route: App\Http\Controllers\HomeController@show
     template: null
     uriFormat: __home__
 type: single

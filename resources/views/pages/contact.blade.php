@@ -21,10 +21,6 @@ new class extends Component {
         'Unfortunately, your message couldn’t be sent. Please try again later.';
 
 
-    public string $title = '';
-    public string $body = '';
-    public ?int $imageId = null;
-
     #[Validate('string|required|min:3|max:255', as: 'Your name')]
     public string $name = '';
 
@@ -37,19 +33,6 @@ new class extends Component {
     public string $message = '';
 
     public string $state = 'empty'; // 'empty', 'success', 'error'
-
-    public function mount(#[CurrentElement] ?Entry $entry = null): void
-    {
-        if ($entry) {
-            [$this->title, $this->body] = [$entry->title, $entry->body ?? ''];
-            $this->imageId = $entry->image?->first()?->id;
-        }
-    }
-
-    public function render()
-    {
-        return $this->view()->title($this->title);
-    }
 
     public function send(): void
     {
@@ -106,14 +89,6 @@ new class extends Component {
 ?>
 
 <div class="space-y-8">
-    <x-slot:featured>
-        <x-layouts.featured-image :image="$imageId" />
-    </x-slot>
-
-    @if ($body)
-        <x-markdown :text="$body" />
-    @endif
-
     <flux:card size="sm" class="mt-8 space-y-4" x-data>
         @if ($state === 'success')
             <x-partials.callout

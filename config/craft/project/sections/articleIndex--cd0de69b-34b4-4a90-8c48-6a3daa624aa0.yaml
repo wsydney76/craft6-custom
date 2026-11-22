@@ -15,7 +15,7 @@ siteSettings:
   d0261b43-45c5-4ee4-96dd-b74042705196: # Default
     enabledByDefault: true
     hasUrls: true
-    route: articles.index
+    route: App\Http\Controllers\ArticleController@index
     template: null
     uriFormat: articles
 type: single

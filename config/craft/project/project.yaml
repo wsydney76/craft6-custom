@@ -39,7 +39,7 @@ cpNav:
         label: Articles
       nav-content-entries-source-section_3acd0de69b-34b4-4a90-8c48-6a3daa624aa0: # Article Index
         label: 'Article Listing'
-dateModified: 1795342557
+dateModified: 1795368804
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
