@@ -502,12 +502,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "72def3b4e7cb4c50a4e5f5d619d92cfe6f9076e3"
+                "reference": "56d1ae12b343911643af2f13463830bddfdba586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/72def3b4e7cb4c50a4e5f5d619d92cfe6f9076e3",
-                "reference": "72def3b4e7cb4c50a4e5f5d619d92cfe6f9076e3",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/56d1ae12b343911643af2f13463830bddfdba586",
+                "reference": "56d1ae12b343911643af2f13463830bddfdba586",
                 "shasum": ""
             },
             "require": {
@@ -694,8 +694,8 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-11-21T09:52:23+00:00",
-            "published-time": "2026-11-21T09:52:32+00:00"
+            "time": "2026-11-21T23:30:14+00:00",
+            "published-time": "2026-11-21T23:30:25+00:00"
         },
         {
             "name": "craftcms/cms-assets",
@@ -703,12 +703,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms-assets.git",
-                "reference": "19a4d7f4acbeaacc4976c55060f0d37920d0e08c"
+                "reference": "0e4cc550a04e5edbfd2a7ed631972a069b1731d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/19a4d7f4acbeaacc4976c55060f0d37920d0e08c",
-                "reference": "19a4d7f4acbeaacc4976c55060f0d37920d0e08c",
+                "url": "https://api.github.com/repos/craftcms/cms-assets/zipball/0e4cc550a04e5edbfd2a7ed631972a069b1731d2",
+                "reference": "0e4cc550a04e5edbfd2a7ed631972a069b1731d2",
                 "shasum": ""
             },
             "default-branch": true,
@@ -721,8 +721,8 @@
             "support": {
                 "source": "https://github.com/craftcms/cms-assets/tree/6.x"
             },
-            "time": "2026-11-20T21:05:06+00:00",
-            "published-time": "2026-11-20T21:05:12+00:00"
+            "time": "2026-11-21T21:00:33+00:00",
+            "published-time": "2026-11-21T21:00:40+00:00"
         },
         {
             "name": "craftcms/laravel-aliases",
@@ -2396,16 +2396,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.13.5",
+            "version": "2.13.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "5aa00c5418afbe3f435910af0e98cb03d659c49d"
+                "reference": "2bd3dccf56e99cdacf74b1ad5e06a08a5a7739f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5aa00c5418afbe3f435910af0e98cb03d659c49d",
-                "reference": "5aa00c5418afbe3f435910af0e98cb03d659c49d",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/2bd3dccf56e99cdacf74b1ad5e06a08a5a7739f2",
+                "reference": "2bd3dccf56e99cdacf74b1ad5e06a08a5a7739f2",
                 "shasum": ""
             },
             "require": {
@@ -2495,7 +2495,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.13.5"
+                "source": "https://github.com/guzzle/psr7/tree/2.13.6"
             },
             "funding": [
                 {
@@ -2511,8 +2511,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-19T20:34:53+00:00",
-            "published-time": "2026-11-19T20:36:04+00:00"
+            "time": "2026-11-21T23:48:40+00:00",
+            "published-time": "2026-11-21T23:49:39+00:00"
         },
         {
             "name": "guzzlehttp/uri-template",
@@ -6060,16 +6060,16 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "5.11.0",
+            "version": "5.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "3aa1f0d0f3c658b803c18050ac49244d07d96907"
+                "reference": "f03bcf6cbcae3a719b9b56c32077379b5cde2190"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/3aa1f0d0f3c658b803c18050ac49244d07d96907",
-                "reference": "3aa1f0d0f3c658b803c18050ac49244d07d96907",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/f03bcf6cbcae3a719b9b56c32077379b5cde2190",
+                "reference": "f03bcf6cbcae3a719b9b56c32077379b5cde2190",
                 "shasum": ""
             },
             "require": {
@@ -6167,10 +6167,10 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/5.11.0"
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/5.12.0"
             },
-            "time": "2026-11-08T06:29:49+00:00",
-            "published-time": "2026-11-08T06:49:56+00:00"
+            "time": "2026-11-22T06:48:07+00:00",
+            "published-time": "2026-11-22T07:25:13+00:00"
         },
         {
             "name": "phpoffice/wmf",

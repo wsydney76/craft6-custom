@@ -32,7 +32,7 @@ ai:
       enabled: $AI_ENABLED
       model: null
       provider: $AI_PROVIDER
-dateModified: 1795255015
+dateModified: 1795341294
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -93,18 +93,6 @@ elementSources:
       page: Entries
       type: heading
     - defaultSort:
-        - title
-        - asc
-      defaultViewMode: table
-      disabled: false
-      key: 'section:cd0de69b-34b4-4a90-8c48-6a3daa624aa0' # Article Index
-      page: Entries
-      showBadgeCount: false
-      tableAttributes:
-        - status
-        - link
-      type: native
-    - defaultSort:
         - postDate
         - desc
       defaultViewMode: table
@@ -116,6 +104,18 @@ elementSources:
         - status
         - 'fieldInstance:822a7287-3023-4a8a-8731-3ca6867d2f49'
         - postDate
+        - link
+      type: native
+    - defaultSort:
+        - title
+        - asc
+      defaultViewMode: table
+      disabled: false
+      key: 'section:cd0de69b-34b4-4a90-8c48-6a3daa624aa0' # Article Index
+      page: Entries
+      showBadgeCount: false
+      tableAttributes:
+        - status
         - link
       type: native
     - defaultSort:
@@ -175,7 +175,7 @@ system:
   edition: solo
   name: $APP_NAME
   retryDuration: null
-  schemaVersion: 6.0.0.42
+  schemaVersion: 6.0.0.44
   timeZone: $TZ
 users:
   allowPublicRegistration: false
