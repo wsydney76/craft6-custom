@@ -32,7 +32,14 @@ ai:
       enabled: $AI_ENABLED
       model: null
       provider: $AI_PROVIDER
-dateModified: 1795341294
+cpNav:
+  default:
+    items:
+      nav-content-entries-source-section_3a90a86bc2-6e67-4370-889e-314a3736fc2d: # Article
+        label: Articles
+      nav-content-entries-source-section_3acd0de69b-34b4-4a90-8c48-6a3daa624aa0: # Article Index
+        label: 'Article Listing'
+dateModified: 1795342557
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
