@@ -85,7 +85,11 @@ new class extends Component {
 
             <ul>
                 @forelse ($this->entries as $entry)
-                    <li>{{ $entry->link }}</li>
+                    <li>
+                        <a href="{{ $entry->url }}#:~:text={{ $this->search }}">
+                            {{ $entry->title }}
+                        </a>
+                    </li>
                 @empty
                     <li>{{ t('No entries found.', category: 'site') }}</li>
                 @endforelse

@@ -5,8 +5,9 @@
 
 @props([
     'text',
+    'flavor' => 'gfm',
 ])
 
 @if ($text)
-    {!! Markdown::parse($text) |> HtmlSanitizers::sanitize(...) !!}
+    {!! Markdown::parse($text, $flavor) |> HtmlSanitizers::sanitize(...) !!}
 @endif

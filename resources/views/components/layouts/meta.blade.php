@@ -7,8 +7,14 @@
 @endphp
 
 <flux:card size="sm">
-    {{ \CraftCms\Cms\t('Created by {author}, {date}.', [
-        'author' => $entry->author->fullName,
-        'date' => $entry->postDate->diffForHumans(),
-    ], category: 'site') }}
+    {{
+        \CraftCms\Cms\t(
+            'Created by {author}, {date}.',
+            [
+                'author' => $entry->author->fullName,
+                'date' => $entry->postDate?->diffForHumans(),
+            ],
+            category: 'site',
+        )
+    }}
 </flux:card>
