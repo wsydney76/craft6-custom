@@ -45,7 +45,7 @@ Route::get('/logout', function (Request $request) {
     Auth::logout();
     $request->session()->invalidate();
     $request->session()->regenerateToken();
-    return response()->redirectToRoute('home');
+    return response()->redirectTo(url('/'));
 })
     ->middleware('auth')
     ->name('logout');
