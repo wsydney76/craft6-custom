@@ -5,6 +5,7 @@ use CraftCms\Cms\Support\Facades\Elements;
 use CraftCms\Cms\Support\Facades\EntryTypes;
 use CraftCms\Cms\Support\Facades\Sections;
 use CraftCms\Cms\User\Elements\User;
+use CraftCms\Cms\View\TemplateMode;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Symfony\Component\DomCrawler\Crawler;
@@ -46,9 +47,8 @@ it(
         $olderArticle = createArticleEntry('Older Article For Show Test', now()->subDay());
         $newestArticle = createArticleEntry('Newest Article For Show Test', now());
 
-        $response = $this->get(
-            route('articles.show', ['slug' => $newestArticle->slug]),
-        )->assertOk();
+        TemplateMode::set(TemplateMode::Site);
+        $response = $this->get(url('/articles/' . $newestArticle->slug))->assertOk();
 
         $html = $response->getContent();
 

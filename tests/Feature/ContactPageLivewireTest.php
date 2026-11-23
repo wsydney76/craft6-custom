@@ -1,10 +1,13 @@
 <?php
 
+use CraftCms\Cms\View\TemplateMode;
 use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 
-it('renders the contact page route', function (): void {
-    $this->get(route('contact'))
+it('renders the contact form on the Craft contact page', function (): void {
+    TemplateMode::set(TemplateMode::Site);
+
+    $this->get('/contact')
         ->assertOk()
         ->assertSee('Your name')
         ->assertSee('Your E-Mail')
@@ -33,6 +36,18 @@ it('validates required and malformed input', function (): void {
             'message' => ['min'],
         ])
         ->assertSet('state', 'empty');
+});
+
+it('shows German validation messages when the locale is German', function (): void {
+    app()->setLocale('de');
+    $component = Livewire::test('pages::contact');
+
+    $component
+        ->set('email', 'not-an-email')
+        ->call('send')
+        ->assertSee('„Ihr Name“ ist ein Pflichtfeld.')
+        ->assertSee('Geben Sie für „Ihre E-Mail-Adresse“ eine gültige E-Mail-Adresse ein.')
+        ->assertSee('Bitte geben Sie eine Nachricht mit mindestens 10 Zeichen ein.');
 });
 
 it('normalizes values before attempting to send', function (): void {
