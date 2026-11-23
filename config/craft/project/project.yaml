@@ -39,7 +39,7 @@ cpNav:
         label: Articles
       nav-content-entries-source-section_3acd0de69b-34b4-4a90-8c48-6a3daa624aa0: # Article Index
         label: 'Article Listing'
-dateModified: 1795368804
+dateModified: 1795428836
 elementSources:
   CraftCms\Cms\Entry\Elements\Entry:
     - defaultSort:
@@ -187,7 +187,7 @@ system:
 users:
   allowPublicRegistration: false
   defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
+  photoSubpath: userphotos
+  photoVolumeUid: fa25ff96-88dd-4065-a4c8-c2f710b17247 # Images
   require2fa: false
   requireEmailVerification: true
