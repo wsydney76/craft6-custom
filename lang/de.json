@@ -1,0 +1,11 @@
+{
+    "Showing": "Zeige",
+    "to": "bis",
+    "of": "von",
+    "results": "Ergebnissen",
+    "pagination.previous": "&laquo; Zurück",
+    "pagination.next": "Weiter &raquo;",
+    "pagination.first": "&laquo; Erste",
+    "pagination.last": "Letzte &raquo;",
+    "Go to page :page": "Gehe zu Seite :page"
+}

@@ -8,7 +8,7 @@
             >
                 <flux:text>{{ $article->teaser }}</flux:text>
                 <flux:text>
-                    {{ $article->author->name }}, {{ $article->postDate->diffForHumans() }}
+                    {{ $article->author->fullName }}, {{ $article->postDate->diffForHumans() }}
                 </flux:text>
             </x-partials.card>
         @endforeach
