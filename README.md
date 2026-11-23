@@ -194,6 +194,21 @@ Dropped `laravel-pint`.
 
 Added `FauxCraft` file to enable autocompletion for often used variables in templates, such as `$entry`, `$image`, etc.
 
+## Translations
+
+Set `APP_LOCALE=de` in `.env` to use German. The default Craft site's language is configured to read `APP_LOCALE`.
+
+Use Craft's `t()` helper with the `site` category for fixed text in Blade views. Use the English source text as the key in [lang/de/site.php](lang/de/site.php). For another language, add the corresponding `lang/<locale>/site.php` file.
+
+```blade
+{{ \CraftCms\Cms\t('Send message', category: 'site') }}
+{{ \CraftCms\Cms\t('Thank you, {name}!', ['name' => $name], category: 'site') }}
+```
+
+Keep named placeholders such as `{name}` in the translated text so Craft can substitute their values.
+
+Livewire validation rules stay in `#[Validate]` attributes. Use `t()` in the component's `messages()` and `validationAttributes()` methods for custom messages and field labels. Laravel looks up built-in rule messages such as `required` and `email` in [lang/de/validation.php](lang/de/validation.php). Keep Laravel placeholders such as `:attribute`, `:min`, and `:max` in those messages.
+
 ## Tests/Proofs of Concept
 
 Some tests and proofs of concept are included in the `tests` directory, including:
@@ -209,8 +224,18 @@ Provisionally added some custom styles for the control panel in `resources/css/c
 
 ## AI Support
 
-Not yet. In local dialect: 
+Laravel Boost is installed as a Composer development dependency. [boost.json](boost.json) configures project guidelines, framework skills, and MCP support for Junie, Codex, and Claude Code. The Boost MCP server provides version-specific Laravel documentation, database schema inspection, and application diagnostics.
 
-> Mia glangt dass i woas das i kannt wann i woin dad. Aber i duas ned, weil i muas ned.
+JetBrains Air uses the project MCP configuration in [.ai/mcp/mcp.json](.ai/mcp/mcp.json). Start the project with `ddev start` so Air can run both servers inside the DDEV container.
 
-But you can add provider/key to  `.env`
+* `laravel-boost-ai` runs `ddev exec php artisan boost:mcp`.
+* `craft-cms-ai` runs `ddev exec php craft mcp:serve --user=admin` and uses the seeded Craft admin account. If your local installation uses a different account, update the `--user` argument.
+
+Update `.env` variables and update Connection settings and `config/ai.php` to use them:
+
+```dotenv
+AI_ENABLED=true
+AI_PROVIDER=openai/anthropic
+OPENAI_API_KEY=your-own-key
+ANTHROPIC_API_KEY=your-own-key
+```
