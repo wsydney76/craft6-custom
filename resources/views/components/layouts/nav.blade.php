@@ -26,7 +26,7 @@ $nav = NavigationData::getNavItems();
                         :current="$link['current']"
                         href="{{ $link['url'] }}"
                     >
-                        {{ $link['label'] }}
+                        {{ \CraftCms\Cms\t($link['label'], category: 'site') }}
                     </flux:navbar.item>
                 @endforeach
             </flux:navbar>
@@ -52,7 +52,7 @@ $nav = NavigationData::getNavItems();
                 :current="$link['current']"
                 href="{{ $link['url'] }}"
             >
-                {{ $link['label'] }}
+                {{ \CraftCms\Cms\t($link['label'], category: 'site') }}
             </flux:sidebar.item>
         @endforeach
     </flux:sidebar>

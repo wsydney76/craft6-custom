@@ -9,30 +9,38 @@ use CraftCms\Cms\User\Elements\User;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
+use function CraftCms\Cms\t;
+
 new class extends Component {
-    private const string SUCCESS_CALLOUT_HEADING = 'Thank you, %s!';
-
-    private const string ERROR_CALLOUT_HEADING = 'Sorry, %s.';
-
-    private const string SUCCESS_CALLOUT_TEXT =
-        'Your message has been sent. We’ll get back to you as soon as possible.';
-
-    private const string ERROR_CALLOUT_TEXT =
-        'Unfortunately, your message couldn’t be sent. Please try again later.';
-
-
-    #[Validate('string|required|min:3|max:255', as: 'Your name')]
+    #[Validate('string|required|min:3|max:255')]
     public string $name = '';
 
-    #[Validate('string|required|email|max:255', as: 'Your E-Mail')]
+    #[Validate('string|required|email|max:255')]
     public string $email = '';
 
-    #[Validate('required', message: 'Please enter a message that is at least 10 characters long.')]
-    #[Validate('min:10', message: 'Please enter a message that is at least 10 characters long.')]
-    #[Validate('max:5000', message: 'Please keep your message to a maximum of 5000 characters.')]
+    #[Validate('required|min:10|max:5000')]
     public string $message = '';
 
     public string $state = 'empty'; // 'empty', 'success', 'error'
+
+    protected function messages(): array
+    {
+        $minimumLengthMessage = t('Please enter a message that is at least 10 characters long.', category: 'site');
+
+        return [
+            'message.required' => $minimumLengthMessage,
+            'message.min' => $minimumLengthMessage,
+            'message.max' => t('Please keep your message to a maximum of 5000 characters.', category: 'site'),
+        ];
+    }
+
+    protected function validationAttributes(): array
+    {
+        return [
+            'name' => t('Your name', category: 'site'),
+            'email' => t('Your E-Mail', category: 'site'),
+        ];
+    }
 
     public function send(): void
     {
@@ -93,8 +101,8 @@ new class extends Component {
         @if ($state === 'success')
             <x-partials.callout
                 wire:transition
-                :heading="sprintf(self::SUCCESS_CALLOUT_HEADING, $name)"
-                :text="self::SUCCESS_CALLOUT_TEXT"
+                :heading="t('Thank you, {name}!', ['name' => $name], category: 'site')"
+                :text="t('Your message has been sent. We’ll get back to you as soon as possible.', category: 'site')"
             />
         @endif
 
@@ -102,8 +110,8 @@ new class extends Component {
             <x-partials.callout
                 wire:transition
                 variant="danger"
-                :heading="sprintf(self::ERROR_CALLOUT_HEADING, $name)"
-                :text="self::ERROR_CALLOUT_TEXT"
+                :heading="t('Sorry, {name}.', ['name' => $name], category: 'site')"
+                :text="t('Unfortunately, your message couldn’t be sent. Please try again later.', category: 'site')"
             />
         @endif
 
@@ -111,33 +119,37 @@ new class extends Component {
             <x-partials.callout
                 wire:transition
                 variant="danger"
-                text="Please correct the highlighted errors and try again."
+                :text="t('Please correct the highlighted errors and try again.', category: 'site')"
             />
         @endif
 
         @if ($state !== 'success')
             <div wire:transition class="space-y-4">
-                <flux:input label="Your name" wire:model="name" placeholder="Jane Doe" />
+                <flux:input
+                    :label="t('Your name', category: 'site')"
+                    wire:model="name"
+                    :placeholder="t('Jane Doe', category: 'site')"
+                />
 
                 <flux:input
-                    label="Your E-Mail"
+                    :label="t('Your E-Mail', category: 'site')"
                     wire:model="email"
-                    placeholder="jane.doe@example.com"
+                    :placeholder="t('jane.doe@example.com', category: 'site')"
                 />
 
                 <flux:textarea
-                    label="Your message"
+                    :label="t('Your message', category: 'site')"
                     rows="5"
                     wire:model="message"
-                    placeholder="Your message..."
+                    :placeholder="t('Your message...', category: 'site')"
                 />
 
                 <div class="mt-8 flex items-center justify-between">
                     <flux:button wire:click="clear" icon="arrow-path" variant="filled">
-                        Reset
+                        {{ t('Reset', category: 'site') }}
                     </flux:button>
                     <flux:button wire:click="send" icon="paper-airplane" variant="primary">
-                        Send message
+                        {{ t('Send message', category: 'site') }}
                     </flux:button>
                 </div>
             </div>
@@ -148,7 +160,7 @@ new class extends Component {
                     icon="pencil-square"
                     variant="primary"
                 >
-                    New message
+                    {{ t('New message', category: 'site') }}
                 </flux:button>
             </div>
         @endif

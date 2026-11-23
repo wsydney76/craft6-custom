@@ -16,13 +16,13 @@
 
     <div class="not-prose my-8">
         <flux:button variant="filled" size="xs" href="?format=pdf&page={{ request('page', 1) }}">
-            Download PDF
+            {{ \CraftCms\Cms\t('Download PDF', category: 'site') }}
         </flux:button>
         <flux:button variant="filled" size="xs" href="?format=json&page={{ request('page', 1) }}">
-            Download JSON
+            {{ \CraftCms\Cms\t('Download JSON', category: 'site') }}
         </flux:button>
         <flux:button variant="filled" size="xs" href="?format=twig&page={{ request('page', 1) }}">
-            Render with Twig
+            {{ \CraftCms\Cms\t('Render with Twig', category: 'site') }}
         </flux:button>
     </div>
 

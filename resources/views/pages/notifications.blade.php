@@ -1,15 +1,22 @@
 <?php
 
 use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\View\View;
 use Livewire\Attributes\Computed;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new #[Title('Notifications')] class extends Component {
+use function CraftCms\Cms\t;
+
+new class extends Component {
     use WithPagination;
 
     public string $show = 'unread'; // Options: all, unread, read
+
+    public function render(): View
+    {
+        return $this->view()->title(t('Notifications', category: 'site'));
+    }
 
     #[Computed]
     public function notifications()
@@ -62,10 +69,10 @@ new #[Title('Notifications')] class extends Component {
 ?>
 
 <div class="space-y-4">
-    <flux:radio.group wire:model.live="show" label="Select notifications" variant="segmented">
-        <flux:radio icon="inbox" value="all" label="All" />
-        <flux:radio icon="envelope" value="unread" label="Unread" />
-        <flux:radio icon="envelope-open" value="read" label="Read" />
+    <flux:radio.group wire:model.live="show" :label="t('Select notifications', category: 'site')" variant="segmented">
+        <flux:radio icon="inbox" value="all" :label="t('All', category: 'site')" />
+        <flux:radio icon="envelope" value="unread" :label="t('Unread', category: 'site')" />
+        <flux:radio icon="envelope-open" value="read" :label="t('Read', category: 'site')" />
     </flux:radio.group>
 
     @forelse ($this->notifications as $notification)
@@ -74,11 +81,11 @@ new #[Title('Notifications')] class extends Component {
             class="flex justify-between gap-4"
         >
             <div>
-                Date: {{ $notification->created_at->isoFormat('lll') }}
+                {{ t('Date:', category: 'site') }} {{ $notification->created_at->isoFormat('lll') }}
                 <br />
-                Name: {{ $notification->data['name'] }}
+                {{ t('Name:', category: 'site') }} {{ $notification->data['name'] }}
                 <br />
-                Email: {{ $notification->data['email'] }}
+                {{ t('Email:', category: 'site') }} {{ $notification->data['email'] }}
                 <br /><br>
                 <x-nl2br :text="$notification->data['message']" />
             </div>
@@ -92,7 +99,7 @@ new #[Title('Notifications')] class extends Component {
                         icon="envelope"
                         size="xs"
                     >
-                        Mark as unread
+                        {{ t('Mark as unread', category: 'site') }}
                     </flux:button>
                 @else
                     <flux:button
@@ -102,7 +109,7 @@ new #[Title('Notifications')] class extends Component {
                         icon="envelope-open"
                         size="xs"
                     >
-                        Mark as read
+                        {{ t('Mark as read', category: 'site') }}
                     </flux:button>
                 @endif
 
@@ -112,14 +119,14 @@ new #[Title('Notifications')] class extends Component {
                     color="red"
                     icon="trash"
                     size="xs"
-                    wire:confirm="Are you sure you want to delete this notification?"
+                    wire:confirm="{{ t('Are you sure you want to delete this notification?', category: 'site') }}"
                 >
-                    Delete
+                    {{ t('Delete', category: 'site') }}
                 </flux:button>
             </div>
         </flux:card>
     @empty
-        <p>No notifications found.</p>
+        <p>{{ t('No notifications found.', category: 'site') }}</p>
     @endforelse
 
     {{ $this->notifications->links() }}

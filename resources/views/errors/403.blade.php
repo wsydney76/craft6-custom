@@ -1,6 +1,6 @@
-<x-layouts::app title="403 - Not Authorized">
+<x-layouts::app :title="\CraftCms\Cms\t('403 - Not Authorized', category: 'site')">
     <x-prose>
-        <p>Sorry, you are not allowed to perform this action.</p>
-        <p><a href="{{ url('/') }}">Return to Home</a></p>
+        <p>{{ \CraftCms\Cms\t('Sorry, you are not allowed to perform this action.', category: 'site') }}</p>
+        <p><a href="{{ url('/') }}">{{ \CraftCms\Cms\t('Return to Home', category: 'site') }}</a></p>
     </x-prose>
 </x-layouts::app>

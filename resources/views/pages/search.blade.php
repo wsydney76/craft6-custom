@@ -8,6 +8,8 @@ use Livewire\Component;
 use Livewire\Attributes\Url;
 use Livewire\WithPagination;
 
+use function CraftCms\Cms\t;
+
 /**
  * A Livewire example full-page component that provides a search interface for Craft entries.
  *
@@ -24,8 +26,15 @@ new class extends Component {
     use WithPagination;
 
     #[Url]
-    #[Validate('not_regex:/ or /', message: 'The "OR" operator must be uppercase.')]
+    #[Validate('not_regex:/ or /')]
     public string $search = '';
+
+    protected function messages(): array
+    {
+        return [
+            'search.not_regex' => t('The "OR" operator must be uppercase.', category: 'site'),
+        ];
+    }
 
     public function mount(): void
     {
@@ -67,9 +76,9 @@ new class extends Component {
                 and handle validation errors using Laravel's standard validation approach.
             --}}
             <flux:input
-                label="Search for:"
+                :label="t('Search for:', category: 'site')"
                 type="search"
-                placeholder="Enter search term..."
+                :placeholder="t('Enter search term...', category: 'site')"
                 icon="magnifying-glass"
                 wire:model.live.debounce.250ms="search"
             />
@@ -78,7 +87,7 @@ new class extends Component {
                 @forelse ($this->entries as $entry)
                     <li>{{ $entry->link }}</li>
                 @empty
-                    <li>No entries found.</li>
+                    <li>{{ t('No entries found.', category: 'site') }}</li>
                 @endforelse
             </ul>
 

@@ -8,7 +8,7 @@
 
 @props([
     'article',
-    'heading' => 'Featured Article',
+    'heading' => \CraftCms\Cms\t('Featured Article', category: 'site'),
 ])
 
 @if ($article)

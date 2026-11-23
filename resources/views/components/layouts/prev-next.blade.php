@@ -11,7 +11,7 @@
 
 <nav
     {{ $attributes->class(['flex justify-between gap-6 border-t border-zinc-400 pt-6']) }}
-    aria-label="Article navigation"
+    aria-label="{{ \CraftCms\Cms\t('Article navigation', category: 'site') }}"
 >
     @if ($prev)
         <a href="{{ $prev->getUrl() }}" class="inline-flex items-center gap-2 hover:underline">

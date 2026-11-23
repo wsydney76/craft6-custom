@@ -9,7 +9,7 @@
 
     <x-partials.article-of-the-day class="mt-8" />
 
-    <x-partials.widget class="mt-8" heading="Latest Articles">
+    <x-partials.widget class="mt-8" :heading="\CraftCms\Cms\t('Latest Articles', category: 'site')">
         <livewire:articles.new />
     </x-partials.widget>
 </x-layouts::app>

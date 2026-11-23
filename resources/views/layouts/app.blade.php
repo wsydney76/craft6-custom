@@ -29,7 +29,7 @@
             href="#main-content"
             class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-zinc-900 focus:shadow-lg"
         >
-            Skip to content
+            {{ \CraftCms\Cms\t('Skip to content', category: 'site') }}
         </a>
 
         <header class="mx-auto mb-8 max-w-5xl py-2">

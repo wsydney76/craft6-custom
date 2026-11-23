@@ -3,7 +3,7 @@
         variant="subtle"
         square
         class="group"
-        tooltip="User menu"
+        :tooltip="\CraftCms\Cms\t('User menu', category: 'site')"
     >
         @guest
             <flux:icon.user variant="mini" />
@@ -24,10 +24,10 @@
             @can('accessCp')
                 <flux:menu.separator />
                 <flux:menu.item :href="route('notifications')" icon="paper-airplane">
-                    Notifications
+                    {{ \CraftCms\Cms\t('Notifications', category: 'site') }}
                 </flux:menu.item>
                 <flux:menu.item :href="route('craft.cp.')" icon="cog">
-                    Craft Control Panel
+                    {{ \CraftCms\Cms\t('Craft Control Panel', category: 'site') }}
                 </flux:menu.item>
                 {{-- <flux:menu.item href="/filament" icon="cog">Filament Panel</flux:menu.item> --}}
             @endcan
@@ -35,15 +35,15 @@
             <flux:menu.separator />
         @endauth
 
-        <flux:menu.item icon="sun" x-on:click="$flux.appearance = 'light'">Light</flux:menu.item>
-        <flux:menu.item icon="moon" x-on:click="$flux.appearance = 'dark'">Dark</flux:menu.item>
+        <flux:menu.item icon="sun" x-on:click="$flux.appearance = 'light'">{{ \CraftCms\Cms\t('Light', category: 'site') }}</flux:menu.item>
+        <flux:menu.item icon="moon" x-on:click="$flux.appearance = 'dark'">{{ \CraftCms\Cms\t('Dark', category: 'site') }}</flux:menu.item>
         <flux:menu.item icon="computer-desktop" x-on:click="$flux.appearance = 'system'">
-            System
+            {{ \CraftCms\Cms\t('System', category: 'site') }}
         </flux:menu.item>
         <flux:menu.separator />
         @auth
             <flux:menu.item :href="route('logout')" icon="arrow-left-start-on-rectangle">
-                Logout
+                {{ \CraftCms\Cms\t('Logout', category: 'site') }}
             </flux:menu.item>
         @endauth
 
@@ -52,7 +52,7 @@
                 href="{{ route('login', ['redirect' => request()->fullUrl()]) }}"
                 icon="arrow-left-end-on-rectangle"
             >
-                Login
+                {{ \CraftCms\Cms\t('Login', category: 'site') }}
             </flux:menu.item>
         @endguest
     </flux:menu>

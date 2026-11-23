@@ -9,7 +9,7 @@
     <div>
         {{ $copyright }}
         <br />
-        All rights reserved
+        {{ \CraftCms\Cms\t('All rights reserved', category: 'site') }}
     </div>
     <div class="flex justify-center">
         @if ($currentElement)
@@ -18,7 +18,7 @@
                     variant="ghost"
                     size="xs"
                     icon="pencil-square"
-                    tooltip="Edit this element"
+                    :tooltip="\CraftCms\Cms\t('Edit this element', category: 'site')"
                     href="{{ $currentElement->cpEditUrl }}"
                 ></flux:button>
             @endcan
@@ -30,13 +30,13 @@
                 size="xs"
                 href="{{ route('login', ['redirect' => request()->fullUrl()]) }}"
             >
-                Login
+                {{ \CraftCms\Cms\t('Login', category: 'site') }}
             </flux:button>
         @endguest
     </div>
     <div class="text-right">
         @if ($articleOfTheDay)
-            Article of the day:
+            {{ \CraftCms\Cms\t('Article of the day:', category: 'site') }}
             <br />
             <a href="{{ $articleOfTheDay->url }}">
                 {{ $articleOfTheDay->title }}

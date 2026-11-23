@@ -1,1 +1,1 @@
-<x-latest-articles heading="More Latest Articles" :exclude="$entry" />
+<x-latest-articles :heading="\CraftCms\Cms\t('More Latest Articles', category: 'site')" :exclude="$entry" />

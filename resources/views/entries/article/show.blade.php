@@ -19,19 +19,19 @@
         <x-blocks :blocks="$entry->contentBuilder->collect()" />
 
         <div class="not-prose my-8">
-            <flux:button variant="filled" size="xs" href="?format=pdf">Download PDF</flux:button>
-            <flux:button variant="filled" size="xs" href="?format=json">Download JSON</flux:button>
+            <flux:button variant="filled" size="xs" href="?format=pdf">{{ \CraftCms\Cms\t('Download PDF', category: 'site') }}</flux:button>
+            <flux:button variant="filled" size="xs" href="?format=json">{{ \CraftCms\Cms\t('Download JSON', category: 'site') }}</flux:button>
             <flux:button variant="filled" size="xs" href="?format=twig">
-                Render with Twig
+                {{ \CraftCms\Cms\t('Render with Twig', category: 'site') }}
             </flux:button>
             @can('save', $entry)
                 <flux:button variant="filled" size="xs" href="?format=livewire">
-                    Edit with Livewire
+                    {{ \CraftCms\Cms\t('Edit with Livewire', category: 'site') }}
                 </flux:button>
             @endcan
         </div>
 
-        <x-latest-articles heading="More Latest Articles" :exclude="$entry" />
+        <x-latest-articles :heading="\CraftCms\Cms\t('More Latest Articles', category: 'site')" :exclude="$entry" />
     </x-prose>
 
     @if ($prev || $next)

@@ -2,7 +2,7 @@
 <html>
     <head></head>
     <body>
-        <p>This document is completely unstyled.</p>
+        <p>{{ \CraftCms\Cms\t('This document is completely unstyled.', category: 'site') }}</p>
 
         <x-layouts.featured-image :image="$entry->image->first()" />
 

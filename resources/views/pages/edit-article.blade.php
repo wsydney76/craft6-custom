@@ -4,6 +4,8 @@ use CraftCms\Cms\Entry\Elements\Entry;
 use Livewire\Component;
 use CraftCms\Cms\Support\Facades\Elements;
 
+use function CraftCms\Cms\t;
+
 new class extends Component {
     public int $id;
     public ?string $title = 'Title of the article';
@@ -29,7 +31,7 @@ new class extends Component {
             foreach ($entry->getFirstErrors() as $attribute => $error) {
                 $this->addError($attribute, $error);
             }
-            Flux::toast('Article could not be saved', $entry->title, variant: 'danger');
+            Flux::toast(t('Article could not be saved', category: 'site'), $entry->title, variant: 'danger');
             return;
         }
 
@@ -37,7 +39,7 @@ new class extends Component {
         // (e.g. if the slug was changed by Craft)
         $this->populateProps($entry);
 
-        Flux::toast('Article saved successfully!', $entry->title, variant: 'success');
+        Flux::toast(t('Article saved successfully!', category: 'site'), $entry->title, variant: 'success');
     }
 
     public function resetProps(): void
@@ -66,26 +68,26 @@ new class extends Component {
 
 <flux:card>
     <form wire:submit="save" class="space-y-4">
-        <flux:input label="Title" wire:model="title" />
+        <flux:input :label="t('Title', category: 'site')" wire:model="title" />
 
-        <flux:input label="Slug" wire:model="slug">
+        <flux:input :label="t('Slug', category: 'site')" wire:model="slug">
             <x-slot name="iconTrailing">
                 <flux:button
                     variant="ghost"
                     icon="arrow-path"
-                    tooltip="Regenerate Slug"
+                    :tooltip="t('Regenerate Slug', category: 'site')"
                     wire:click="regenerateSlug"
                 ></flux:button>
             </x-slot>
         </flux:input>
 
-        <flux:input label="Teaser" wire:model="teaser" />
+        <flux:input :label="t('Teaser', category: 'site')" wire:model="teaser" />
 
         <div class="flex justify-between">
             <flux:button type="button" variant="filled" size="sm" wire:click="resetProps">
-                Reset
+                {{ t('Reset', category: 'site') }}
             </flux:button>
-            <flux:button type="submit" variant="primary" size="sm">Save</flux:button>
+            <flux:button type="submit" variant="primary" size="sm">{{ t('Save', category: 'site') }}</flux:button>
         </div>
     </form>
 </flux:card>
