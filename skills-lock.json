@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "skills": {
+    "craft-6-plugin-development": {
+      "source": "craftcms/skills",
+      "commit": "b23292c6c2a635d168c81307b87db56df0999948",
+      "sourceType": "github",
+      "skillPath": "skills/craft-6-plugin-development/SKILL.md",
+      "computedHash": "96b1ab53f3da8f316f2b5be3ed0b961b255b00a0080bd6238583fdbde3f76c7d",
+      "installMode": "copy"
+    },
+    "craft-6-plugin-upgrade": {
+      "source": "craftcms/skills",
+      "commit": "b23292c6c2a635d168c81307b87db56df0999948",
+      "sourceType": "github",
+      "skillPath": "skills/craft-6-plugin-upgrade/SKILL.md",
+      "computedHash": "e83771d192cc4bb950046cb74e4461107c8bd13ff211258bb8c6b07d0738c7c0",
+      "installMode": "copy"
+    },
+    "craft-6-project-upgrade": {
+      "source": "craftcms/skills",
+      "commit": "b23292c6c2a635d168c81307b87db56df0999948",
+      "sourceType": "github",
+      "skillPath": "skills/craft-6-project-upgrade/SKILL.md",
+      "computedHash": "a3e143b0b19dad3951f430ba0c989601bd9e5866d65f74fcb054946e073895a6",
+      "installMode": "copy"
+    },
+    "craft-translations": {
+      "source": "craftcms/skills",
+      "commit": "b23292c6c2a635d168c81307b87db56df0999948",
+      "sourceType": "github",
+      "skillPath": "skills/craft-translations/SKILL.md",
+      "computedHash": "df2242fe2d2e8d10c21af8db0bb70eaffc036de8b124ac98ecec2f739ded9f6a",
+      "installMode": "copy"
+    }
+  }
+}
