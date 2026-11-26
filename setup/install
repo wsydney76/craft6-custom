@@ -1,6 +1,10 @@
 #!/bin/bash
 
-project="${1:-$(basename "$PWD")}"
+if [ -z $1 ]
+then
+    echo Usage: install project-name
+    exit 1
+fi
 
 echo Installing project $1...
 
