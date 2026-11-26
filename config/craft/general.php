@@ -29,9 +29,18 @@ return GeneralConfig::create()
 
     // === Custom settings ===
 
+    // Run pending queue jobs automatically in the control panel?
+    // If false, a queue worker must be running in the background to process jobs.
+    ->runQueueAutomatically(env('RUN_QUEUE_AUTOMATICALLY', true))
+    // Disable public template routing
     ->privateTemplateTrigger('')
+    // Add cache-busting revisions to asset URLs
     ->revAssetUrls()
+    // Convert uploaded filenames to ASCII
     ->convertFilenamesToAscii()
+    // Limit automatically generated slugs to ASCII characters
     ->limitAutoSlugsToAscii()
+    // Don't optimize images to reduce filesize on upload, sacrificing quality
     ->optimizeImageFilesize(false)
+    // Store soft-deleted assets on the dedicated trash disk
     ->trashedAssetDisk('trashed-assets');
