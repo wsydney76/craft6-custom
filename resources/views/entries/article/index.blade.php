@@ -1,16 +1,19 @@
 <x-layouts::app :$entry size="lg">
     <x-partials.cards-wrapper>
         @foreach ($articles as $article)
-            <x-partials.card
-                :href="$article->getUrl()"
-                :heading="$article->title"
-                :image="$article->image->eagerly()->first()"
-            >
-                <flux:text>{{ $article->teaser }}</flux:text>
-                <flux:text>
-                    {{ $article->author->fullName }}, {{ $article->postDate->diffForHumans() }}
-                </flux:text>
-            </x-partials.card>
+            <div>
+                <x-partials.card
+                    :href="$article->getUrl()"
+                    :heading="$article->title"
+                    :image="$article->image->eagerly()->first()"
+                >
+                    <flux:text>{{ $article->teaser }}</flux:text>
+                    <flux:text>
+                        {{ $article->author->fullName }},
+                        {{ $article->postDate->diffForHumans() }}
+                    </flux:text>
+                </x-partials.card>
+            </div>
         @endforeach
     </x-partials.cards-wrapper>
 
