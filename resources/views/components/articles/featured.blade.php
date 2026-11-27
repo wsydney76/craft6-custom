@@ -8,14 +8,18 @@
 
 @props([
     'article',
-    'heading' => \CraftCms\Cms\t('Featured Article', category: 'site'),
+    'heading' => \CraftCms\Cms\t('Featured Article',
+    category:'site'),
 ])
 
 @if ($article)
-    <div {{ $attributes->class('prose max-w-none dark:prose-invert') }}>
-        <h2>{{ $heading }}</h2>
+    <div {{ $attributes->class('max-w-none') }}>
+        <x-prose>
+            <h2>{{ $heading }}</h2>
+        </x-prose>
+
         <x-partials.card
-            class="not-prose"
+            class="mt-4"
             :href="$article->getUrl()"
             :heading="$article->title"
             :image="$article->image->eagerly()->first()"
@@ -28,7 +32,11 @@
             @endif
 
             <flux:text>
-                {{ $article->author->name }}, {{ $article->postDate->diffForHumans() }}
+                @if ($name = $article->author->fullName)
+                    {{ $name }},
+                @endif
+
+                {{ $article->postDate->diffForHumans() }}
             </flux:text>
         </x-partials.card>
     </div>

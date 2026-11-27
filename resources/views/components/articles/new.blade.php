@@ -32,6 +32,6 @@ new class extends Component {
     </ul>
 
     <div class="mt-4">
-        {{ $this->entries->links(data: ['scrollTo' => false]) }}
+        {{ $this->entries->links('components.partials.simple-pagination', ['scrollTo' => false]) }}
     </div>
 </div>
